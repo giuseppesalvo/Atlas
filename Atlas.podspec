@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                        Atlas is a redux store for your swift apps without the reducer layer
+                        Atlas is a redux like store for your swift iOS/macOS/tvOS apps without the reducer layer
                         DESC
   s.homepage         = 'https://github.com/giuseppesalvo/atlas'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
