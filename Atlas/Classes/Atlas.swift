@@ -87,7 +87,7 @@ public class Atlas<T> {
      * Dispatching an asynchronous action
      *
      */
-    public func dispatch<A: AsyncAtlasAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
+    public func dispatch<A: AtlasAsyncAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
         let block = { (_ state: T) -> Void in
             self.state = state
             self.semaphore.signal()
@@ -106,7 +106,7 @@ public class Atlas<T> {
      * Here the semaphore will not be used
      * So, multiple actions dispatched sequentially using this function, will have the same state
      */
-    public func dispatchUnsafe<A: AsyncAtlasAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
+    public func dispatchUnsafe<A: AtlasAsyncAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
         let block = { (_ state: T) -> Void in
             self.state = state
             completition?(self.state)

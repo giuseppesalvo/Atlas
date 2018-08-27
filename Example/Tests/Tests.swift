@@ -21,7 +21,7 @@ struct Decrement: AtlasAction {
     }
 }
 
-struct IncrementAsync: AsyncAtlasAction {
+struct IncrementAsync: AtlasAsyncAction {
     func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             var newState = state
@@ -33,11 +33,11 @@ struct IncrementAsync: AsyncAtlasAction {
 
 struct CountOperation: AtlasActionGroup {
     func handle(store: Atlas<CountState>, completition: @escaping () -> Void) {
-        // Since the store internal queue is serial, this will works
         store.dispatch(Increment())
         store.dispatch(Increment())
         store.dispatch(Increment())
         store.dispatch(Increment())
+        // Since the store internal queue is serial, this callback will be the real end of the actionGroup
         store.dispatch(Decrement()) { _ in
             completition()
         }
@@ -95,7 +95,7 @@ class Tests: XCTestCase {
         ))
         let expectation = XCTestExpectation(description: "Testing asyncronous action")
         store.dispatch(CountOperation()) { state in
-            XCTAssertEqual(state.count, 3, "Count should be 1")
+            XCTAssertEqual(state.count, 3, "Count should be 3")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)

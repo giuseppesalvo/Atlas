@@ -17,10 +17,10 @@ class AtlasSubscriberBox: Hashable {
         return lhs.value === rhs.value && rhs.queue === lhs.queue
     }
     
-    weak var value: AnyAtlasSubscriber?
+    weak var value: AtlasAnySubscriber?
     var queue: DispatchQueue
     
-    init(value: AnyAtlasSubscriber, queue: DispatchQueue) {
+    init(value: AtlasAnySubscriber, queue: DispatchQueue) {
         self.value = value
         self.queue = queue
     }

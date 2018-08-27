@@ -8,11 +8,11 @@
 
 import Foundation
 
-public protocol AnyAtlasSubscriber: class {
+public protocol AtlasAnySubscriber: class {
     func defaultNewState(_ state: Any)
 }
 
-public protocol AtlasSubscriber: AnyAtlasSubscriber {
+public protocol AtlasSubscriber: AtlasAnySubscriber {
     associatedtype StateType
     func newState(_ state: StateType)
 }

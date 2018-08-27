@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol AsyncAtlasAction {
+public protocol AtlasAsyncAction {
     associatedtype StateType
     func handle(state: StateType, completition: @escaping (_ state: StateType) -> Void)
 }
