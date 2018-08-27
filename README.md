@@ -15,12 +15,12 @@ it, simply add the following line to your Podfile:
 pod 'Atlas'
 ```
 
+## How it works
+
 **there are only 2 components**
 
 - state
 - actions
-
-## How it works
 
 ### Initializing
 
@@ -72,6 +72,27 @@ struct Increment: AtlasAsyncAction {
 }
 
 store.dispatch(Increment()) { state in
+    print("done! ", state.count)
+}
+
+```
+
+**Actions group**
+
+```swift
+
+struct CounterAction: AtlasActionGroup {
+    func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
+        store.dispatch(Increment())
+        store.dispatch(Increment())
+        // Since the store internal queue is serial, this callback will be the real end of the actionGroup
+        store.dispatch(Decrement()) { _ in
+            completition()
+        }
+    }
+}
+
+store.dispatch(CounterAction()) { state in
     print("done! ", state.count)
 }
 
@@ -132,7 +153,7 @@ You can subscribe also with a block
 
 ```swift
 
-countSubscriber = AtlasAtomSubscriber(store: countStore) { [weak self] state in
+let countSubscriber = AtlasAtomSubscriber(store: countStore) { [weak self] state in
     print("new count state", state)
 }
 
