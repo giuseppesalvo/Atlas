@@ -7,21 +7,29 @@
 //
 
 import Cocoa
+import Atlas
 
 class ViewController: NSViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    // Do any additional setup after loading the view.
-  }
-
-  override var representedObject: Any? {
-    didSet {
-    // Update the view, if already loaded.
+    @IBOutlet var count: NSTextField!
+    
+    @IBAction func increment(_ sender: Any) {
+        store.dispatch(Increment())
     }
-  }
 
+    @IBAction func decrement(_ sender: Any) {
+        store.dispatch(Decrement())
+    }
+}
 
+extension ViewController: AtlasSubscriber {
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        store.subscribe(self)
+    }
+    
+    func newState(_ state: CountState) {
+        count.stringValue = String(state.count)
+    }
 }
 

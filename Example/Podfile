@@ -2,10 +2,10 @@ use_frameworks!
 
 target 'Atlas_Example' do
   pod 'Atlas', :path => '../'
+  pod 'SwiftLint'
+end
 
-  target 'Atlas_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'Atlas_Tests' do
+    pod 'Atlas', :path => '../'
+    pod 'SwiftLint'
 end

@@ -1,0 +1,23 @@
+PODS:
+  - Atlas (0.0.1)
+  - SwiftLint (0.25.1)
+
+DEPENDENCIES:
+  - Atlas (from `../`)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  Atlas:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Atlas: f771f594c04122043da863f09d85c26a03b545eb
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+
+PODFILE CHECKSUM: a32faaca565053451da8cfe896a0679ee6872df6
+
+COCOAPODS: 1.5.3

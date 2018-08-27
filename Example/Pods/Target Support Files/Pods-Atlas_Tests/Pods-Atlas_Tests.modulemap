@@ -1,0 +1,6 @@
+framework module Pods_Atlas_Tests {
+  umbrella header "Pods-Atlas_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

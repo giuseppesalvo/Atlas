@@ -1,29 +1,104 @@
 import XCTest
 import Atlas
 
+struct CountState {
+    var count: Int
+}
+
+struct Increment: AtlasAction {
+    func handle(state: CountState) -> CountState {
+        var newState = state
+        newState.count += 1
+        return newState
+    }
+}
+
+struct Decrement: AtlasAction {
+    func handle(state: CountState) -> CountState {
+        var newState = state
+        newState.count -= 1
+        return newState
+    }
+}
+
+struct IncrementAsync: AsyncAtlasAction {
+    func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            var newState = state
+            newState.count += 1
+            completition(newState)
+        }
+    }
+}
+
+struct CountOperation: AtlasActionGroup {
+    func handle(store: Atlas<CountState>, completition: @escaping () -> Void) {
+        // Since the store internal queue is serial, this will works
+        store.dispatch(Increment())
+        store.dispatch(Increment())
+        store.dispatch(Increment())
+        store.dispatch(Increment())
+        store.dispatch(Decrement()) { _ in
+            completition()
+        }
+    }
+}
+
 class Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testInitialization() {
+        let store = Atlas(initialState: CountState(
+            count: 0
+        ))
+        XCTAssert(store.state.count == 0, "Count should be 0")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
+    func testAction() {
+        let store = Atlas(initialState: CountState(
+            count: 0
+        ))
+        var expectations: [XCTestExpectation] = []
+        for i in 1..<100 {
+            let expectation = XCTestExpectation(description: "Testing action with \(i)")
+            store.dispatch(Increment()) { state in
+                XCTAssert(state.count == i, "Count should be \(i)")
+                expectation.fulfill()
+            }
+            expectations.append(expectation)
         }
+        wait(for: expectations, timeout: 10.0)
     }
     
+    func testAsyncAction() {
+        let store = Atlas(initialState: CountState(
+            count: 0
+        ))
+        let expectation = XCTestExpectation(description: "Testing asyncronous action")
+        store.dispatch(IncrementAsync()) { state in
+            XCTAssert(state.count == 1, "Count should be 1")
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testActionGroup() {
+        let store = Atlas(initialState: CountState(
+            count: 0
+        ))
+        let expectation = XCTestExpectation(description: "Testing asyncronous action")
+        store.dispatch(CountOperation()) { state in
+            XCTAssertEqual(state.count, 3, "Count should be 1")
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
 }
 

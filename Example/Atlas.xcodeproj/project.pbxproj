@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5303F81F0A741BAC8C283B62 /* Pods_Atlas_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD2F0146A54C20AD256FE42 /* Pods_Atlas_Example.framework */; };
+		5D86C80D2132A5A3002E3666 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86C80C2132A5A3002E3666 /* Store.swift */; };
 		7A255D5248C32812BBD3EC39 /* Pods_Atlas_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD20667114EEA8B405FEF6AF /* Pods_Atlas_Tests.framework */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F67E20348A760038D96B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* ViewController.swift */; };
@@ -28,11 +29,12 @@
 
 /* Begin PBXFileReference section */
 		00F7185C1673048B0D938E2D /* Pods-Atlas_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas_Tests/Pods-Atlas_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5A07812EB8B07BCF1A6128F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5A07812EB8B07BCF1A6128F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5D86C80C2132A5A3002E3666 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		6A70970B95BB7D9AEE2930C3 /* Pods-Atlas_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas_Tests/Pods-Atlas_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CD2F0146A54C20AD256FE42 /* Pods_Atlas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85E219566AFE18C7B9B268BC /* Atlas.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Atlas.podspec; path = ../Atlas.podspec; sourceTree = "<group>"; };
-		8A38A2BD704351A2EAD36300 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		85E219566AFE18C7B9B268BC /* Atlas.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Atlas.podspec; path = ../Atlas.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8A38A2BD704351A2EAD36300 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		94F04D29DB8FC39D0AF0B849 /* Pods-Atlas_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D6CB5ABAD22E83E58F725FF8 /* Pods-Atlas_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DD20667114EEA8B405FEF6AF /* Pods_Atlas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 			children = (
 				ED83F67B20348A760038D96B /* AppDelegate.swift */,
 				ED83F67D20348A760038D96B /* ViewController.swift */,
+				5D86C80C2132A5A3002E3666 /* Store.swift */,
 				ED83F67F20348A760038D96B /* Assets.xcassets */,
 				ED83F68120348A760038D96B /* Main.storyboard */,
 				ED83F68420348A760038D96B /* Info.plist */,
@@ -152,7 +155,7 @@
 				ED83F67420348A760038D96B /* Sources */,
 				ED83F67520348A760038D96B /* Frameworks */,
 				ED83F67620348A760038D96B /* Resources */,
-				F44DDC2E8F5587D7BDE43550 /* [CP] Embed Pods Frameworks */,
+				2FDFA99CEAF5911B8E3B85E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +174,7 @@
 				ED83F68620348A760038D96B /* Sources */,
 				ED83F68720348A760038D96B /* Frameworks */,
 				ED83F68820348A760038D96B /* Resources */,
+				5C6CD68D1902D46BA48ECBF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +246,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2FDFA99CEAF5911B8E3B85E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6CD68D1902D46BA48ECBF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Atlas_Tests/Pods-Atlas_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Atlas_Tests/Pods-Atlas_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		779B0513D26CC080F91C0FE6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,24 +318,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F44DDC2E8F5587D7BDE43550 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -303,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D86C80D2132A5A3002E3666 /* Store.swift in Sources */,
 				ED83F67E20348A760038D96B /* ViewController.swift in Sources */,
 				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
 			);
