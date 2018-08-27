@@ -1,15 +1,11 @@
-# Atlas
+# Atlas Swift Store
+
+Atlas is a redux store for your swift apps without the reducer layer
 
 [![CI Status](https://img.shields.io/travis/Giuseppe/Atlas.svg?style=flat)](https://travis-ci.org/Giuseppe/Atlas)
 [![Version](https://img.shields.io/cocoapods/v/Atlas.svg?style=flat)](https://cocoapods.org/pods/Atlas)
 [![License](https://img.shields.io/cocoapods/l/Atlas.svg?style=flat)](https://cocoapods.org/pods/Atlas)
 [![Platform](https://img.shields.io/cocoapods/p/Atlas.svg?style=flat)](https://cocoapods.org/pods/Atlas)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -19,9 +15,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Atlas'
 ```
-#  Atlas Swift Store
-
-Atlas is a redux store for your swift apps without the reducer layer
 
 **there are only 2 components**
 
@@ -71,7 +64,7 @@ store.dispatch(Increment()) { state in
 
 struct Increment: AtlasAsyncAction {
     func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
-        apiRequest { result
+        YourApi.doSomething { result in
             var newState   = state
             newState.count = result
             completition(newState)
@@ -153,7 +146,7 @@ Notes
 
 ### That's all!
 
-Inspired by ReSwift, redux
+Inspired by ReSwift and Redux
 
 ## License
 
