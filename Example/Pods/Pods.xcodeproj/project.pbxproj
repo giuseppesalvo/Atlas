@@ -3,138 +3,122 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		133CC137C054BB4745FF0F2B338471BB /* SubscriberBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482814D8E880877E085AFCCD7635205 /* SubscriberBox.swift */; };
-		1FE23FC1DAB96400A27B945E2DF07319 /* Atlas-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCD5145ECDB761390C7CCA1DB3E05A7 /* Atlas-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		278365CBDAEE62E271FD08EA81429266 /* Atlas-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A6C7255A2706B5A554D72F24509BD /* Atlas-dummy.m */; };
-		302C148686C08F5548505B8E10D62C74 /* Pods-Atlas_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1532009F9114EAA28B8BED52492AB12B /* Pods-Atlas_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C402E01D28617B06F1419B76BC7378E /* Pods-Atlas_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A12F60F7651656EA7B6A5B26EEEE4 /* Pods-Atlas_Example-dummy.m */; };
-		418676993A979BFFAFB77B24535E0D71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		79BC763123863F3D998DC03E9FDCEF00 /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9317E56C7A5BE1CF4801E7EC06D1431A /* AsyncAction.swift */; };
-		8067B1CDC71DDD01EAD5695EFD22A3D5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		923F9F7F4486BF3699D2D5B442D64E0A /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55634A3CD4EED4892FCF122B96EF600E /* Subscriber.swift */; };
-		97E7CAA479E87F9CA8F192486E2B3A33 /* ActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E40D25D69EB415B030C5E9D889BE2 /* ActionGroup.swift */; };
-		A4B3A5C83F1450A8B76D962F7AAA5C23 /* Pods-Atlas_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F73765ED574B113B19A7EEEB11F109 /* Pods-Atlas_Tests-dummy.m */; };
-		A88AD3F1AF5E243B73F7423B0FDF80A0 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D150C851DF74FA68779901DCA1FD5 /* Action.swift */; };
-		ACCDAF6C339B01BF7C526F5522523B1A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		BD9DF52CFB27D27F6A7D0F23481C13AD /* Atlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BDF2DA879CEA71FF97674C356BA61 /* Atlas.swift */; };
-		E20C1D76B7ED013BDFF8B1940C527E56 /* Pods-Atlas_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E91EB1DE88724D2E5F4D501CED10E36B /* Pods-Atlas_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E224D0E69D185C06571BF136380A3336 /* AtomSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E664BC04617F8CD326619E794176B9 /* AtomSubscriber.swift */; };
+		0ECD9DB7F8757E17AC2FA7F3A9601D9C /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF5AFEA9CDCFAA96D6726BA280A702 /* Action.swift */; };
+		11AD6452CA4137662BFBC9BCAB0981C8 /* Atlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2D8BBE514DFB7A4178C63E01D8D68 /* Atlas.swift */; };
+		2717B59F9D9170B312C185CA24DF93FC /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB66F15B50F0BFD1D7145F2F0997A855 /* AsyncAction.swift */; };
+		2B78DC774C2E665A6C408300ED987FB8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		39D85B41DF1FE42C1DFD1B6BEDEC5F77 /* AtlasSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B91E106C4258229D87F9E1528AA3D1 /* AtlasSwift-dummy.m */; };
+		3DBD3BBC052BD0D3359A86032589FE58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		5E1D025BE6AD54DA8D9A74691157F1B0 /* Pods-Atlas_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A12F60F7651656EA7B6A5B26EEEE4 /* Pods-Atlas_Example-dummy.m */; };
+		68B57BB173AE1DF3090B0C7588F3D39A /* AtomSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B9B6B1F10C651EB1B9E4A32D412C9 /* AtomSubscriber.swift */; };
+		6A96A614ADAD95867F929B29A105242D /* Pods-Atlas_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E91EB1DE88724D2E5F4D501CED10E36B /* Pods-Atlas_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B3347C1F9234D9D2B169465B52912A8 /* AtlasSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4BDF991C7EC5648719F29B3B58EDFE /* AtlasSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7203E1639238D2C13E58171915988C11 /* ActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDD590D316E69C936ECAAD902F644 /* ActionGroup.swift */; };
+		91CFCE89CF59C1FB9A97C719126D0650 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		BBFDE41A0D22042C356A2841AF35F8D0 /* Pods-Atlas_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1532009F9114EAA28B8BED52492AB12B /* Pods-Atlas_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD819BF3F5ACBA23B3F3BFDE1239B194 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34839A6F554C727CD3443C633A6A1F6E /* Subscriber.swift */; };
+		D7C584AC627B2F349A4488457424F855 /* SubscriberBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA688951C7A9DB37ADB923113D5CEF4 /* SubscriberBox.swift */; };
+		DFDCE4798224D132417E68CAFE0A9AE0 /* Pods-Atlas_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F73765ED574B113B19A7EEEB11F109 /* Pods-Atlas_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09E640676DC85D6FE1E1BEF35A992185 /* PBXContainerItemProxy */ = {
+		43040612D80011A2120CA2BFE519DAB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 986B2DD36A803CAD942C471A5587E3B7;
-			remoteInfo = Atlas;
+			remoteGlobalIDString = 1C7CF85D15973D4FEADCDD4711E9C360;
+			remoteInfo = AtlasSwift;
 		};
-		7C17A8A23D7D6A53D890ED302B4D61FD /* PBXContainerItemProxy */ = {
+		D544FECCF58B03D1AF93372AEBE68DDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 986B2DD36A803CAD942C471A5587E3B7;
-			remoteInfo = Atlas;
+			remoteGlobalIDString = 1C7CF85D15973D4FEADCDD4711E9C360;
+			remoteInfo = AtlasSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07CE688382FDBCCFF9019355ED66085B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		101B48EDB7CEE1F11E7362DA3354928D /* Pods-Atlas_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		13110DF0FA1149CC8B4BCFF272A375F5 /* AtlasSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AtlasSwift.modulemap; sourceTree = "<group>"; };
+		14B91E106C4258229D87F9E1528AA3D1 /* AtlasSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AtlasSwift-dummy.m"; sourceTree = "<group>"; };
 		1532009F9114EAA28B8BED52492AB12B /* Pods-Atlas_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Atlas_Tests-umbrella.h"; sourceTree = "<group>"; };
-		15816339B208EFFACD69574FAD5352E2 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		1688492D703294130A79F65A69159E62 /* Pods-Atlas_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Atlas_Example.modulemap"; sourceTree = "<group>"; };
 		1AE885A9216C37213584B0E67B456575 /* Pods-Atlas_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Atlas_Tests.modulemap"; sourceTree = "<group>"; };
+		297DDD590D316E69C936ECAAD902F644 /* ActionGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionGroup.swift; path = AtlasSwift/Classes/ActionGroup.swift; sourceTree = "<group>"; };
+		2BCEA90BF6CDAA1325970FE69695E843 /* Pods_Atlas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Atlas_Tests.framework; path = "Pods-Atlas_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34839A6F554C727CD3443C633A6A1F6E /* Subscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscriber.swift; path = AtlasSwift/Classes/Subscriber.swift; sourceTree = "<group>"; };
 		34F73765ED574B113B19A7EEEB11F109 /* Pods-Atlas_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Atlas_Tests-dummy.m"; sourceTree = "<group>"; };
-		35571CD7A112A665F8475EF0BDE71EBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		376E40D25D69EB415B030C5E9D889BE2 /* ActionGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionGroup.swift; path = Atlas/Classes/ActionGroup.swift; sourceTree = "<group>"; };
 		468800D7456ECCA7F9C9391E29776110 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49577974B45CFA6A5A20A87A48BA93F3 /* Pods-Atlas_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Example-resources.sh"; sourceTree = "<group>"; };
-		4BD57EB07E5DF774DFBCDB3DAB261E35 /* Atlas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atlas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5103140B519FAEB3C060A39633BD2EFF /* Pods-Atlas_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Tests-resources.sh"; sourceTree = "<group>"; };
-		55634A3CD4EED4892FCF122B96EF600E /* Subscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscriber.swift; path = Atlas/Classes/Subscriber.swift; sourceTree = "<group>"; };
-		58E664BC04617F8CD326619E794176B9 /* AtomSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AtomSubscriber.swift; path = Atlas/Classes/AtomSubscriber.swift; sourceTree = "<group>"; };
+		64785BC10332709E7667358F9A679823 /* AtlasSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AtlasSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6DA2D8BBE514DFB7A4178C63E01D8D68 /* Atlas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Atlas.swift; path = AtlasSwift/Classes/Atlas.swift; sourceTree = "<group>"; };
+		71978BED2E9E8C77EA2CC2D47397D66C /* AtlasSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AtlasSwift.xcconfig; sourceTree = "<group>"; };
+		76049C64937BCAFEB2AA29275F08ECF5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7A4BDF991C7EC5648719F29B3B58EDFE /* AtlasSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AtlasSwift-umbrella.h"; sourceTree = "<group>"; };
 		8001EA77D0E9C3ED4CFA64DCC84CAB86 /* Pods-Atlas_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8180C0DB85A6FB85D5D9C206EB063A74 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84C03F5BABBCE6B69C8244A7FAD0A067 /* Pods-Atlas_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8E5230B928FC5E0C45C2E4A836A7E956 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9317E56C7A5BE1CF4801E7EC06D1431A /* AsyncAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncAction.swift; path = Atlas/Classes/AsyncAction.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9647E5884CEB985B666592D43D93B0C5 /* Atlas.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Atlas.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99DDCD6DE89535C0C8C3E4F48C68349C /* Atlas-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Atlas-prefix.pch"; sourceTree = "<group>"; };
-		9E1A6C7255A2706B5A554D72F24509BD /* Atlas-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Atlas-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CA688951C7A9DB37ADB923113D5CEF4 /* SubscriberBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscriberBox.swift; path = AtlasSwift/Classes/SubscriberBox.swift; sourceTree = "<group>"; };
+		9D1B9B6B1F10C651EB1B9E4A32D412C9 /* AtomSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AtomSubscriber.swift; path = AtlasSwift/Classes/AtomSubscriber.swift; sourceTree = "<group>"; };
 		A169CD65D56F3BEF5AAA1B0BDA06E449 /* Pods-Atlas_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A6949511A3FCC5E380F86A06EDB0BA75 /* Pods_Atlas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB74361E6CD48D398784A0E9D3A13611 /* Pods-Atlas_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Atlas_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		ADCD5145ECDB761390C7CCA1DB3E05A7 /* Atlas-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Atlas-umbrella.h"; sourceTree = "<group>"; };
 		ADDB29145E28DBB17973F5A40CF423AD /* Pods-Atlas_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Atlas_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AE2113DCA9F5EC2661FAE184C161CB1C /* AtlasSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AtlasSwift.framework; path = AtlasSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52EA67B9FC4347389C47DFFFB24C608 /* AtlasSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AtlasSwift-prefix.pch"; sourceTree = "<group>"; };
 		BD0A12F60F7651656EA7B6A5B26EEEE4 /* Pods-Atlas_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Atlas_Example-dummy.m"; sourceTree = "<group>"; };
 		C56A1DFC631053FEFB9A42C24EB41FA2 /* Pods-Atlas_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C78AB3803EA54715C0AFA98CE453DD80 /* Pods_Atlas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D482814D8E880877E085AFCCD7635205 /* SubscriberBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscriberBox.swift; path = Atlas/Classes/SubscriberBox.swift; sourceTree = "<group>"; };
-		D98D150C851DF74FA68779901DCA1FD5 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Atlas/Classes/Action.swift; sourceTree = "<group>"; };
+		CB66F15B50F0BFD1D7145F2F0997A855 /* AsyncAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncAction.swift; path = AtlasSwift/Classes/AsyncAction.swift; sourceTree = "<group>"; };
+		DE0813BBC5A612C5BA9EC8F596C6D84F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E8FB2266D8E0041B57CA03373F35A32E /* Atlas.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Atlas.modulemap; sourceTree = "<group>"; };
+		DFFF5AFEA9CDCFAA96D6726BA280A702 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = AtlasSwift/Classes/Action.swift; sourceTree = "<group>"; };
 		E91EB1DE88724D2E5F4D501CED10E36B /* Pods-Atlas_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Atlas_Example-umbrella.h"; sourceTree = "<group>"; };
 		F043038F6C54B6A10682B5AA438351E1 /* Pods-Atlas_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Atlas_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F1F1B07772D38FA286A26417D6220593 /* Pods_Atlas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Atlas_Example.framework; path = "Pods-Atlas_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A49AEF2CB2FA72CDEBA4C0F8C10DCD /* Pods-Atlas_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F69CA3A6EEBC93B3CA2A57FB54764BC7 /* Atlas.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Atlas.xcconfig; sourceTree = "<group>"; };
 		F81E5E8B86451CE382A0D771587373A2 /* Pods-Atlas_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Atlas_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FB7BDF2DA879CEA71FF97674C356BA61 /* Atlas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Atlas.swift; path = Atlas/Classes/Atlas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		002085A021447B3BD388E5F24B26411C /* Frameworks */ = {
+		3B1CC983859BCFDBE0FEA6FB49A81C37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACCDAF6C339B01BF7C526F5522523B1A /* Cocoa.framework in Frameworks */,
+				91CFCE89CF59C1FB9A97C719126D0650 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F7F2938DE2DC0009286019FC4FB0757 /* Frameworks */ = {
+		91D988E73935C770FDA1D6E8F44FADAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418676993A979BFFAFB77B24535E0D71 /* Cocoa.framework in Frameworks */,
+				3DBD3BBC052BD0D3359A86032589FE58 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B58EA93A20E4836923D156F5DD7FA441 /* Frameworks */ = {
+		9C7A760A972BB82AD63EACB53C8E15F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8067B1CDC71DDD01EAD5695EFD22A3D5 /* Cocoa.framework in Frameworks */,
+				2B78DC774C2E665A6C408300ED987FB8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26397B1DB03B5D2162C5B9C196E74525 /* Atlas */ = {
-			isa = PBXGroup;
-			children = (
-				D98D150C851DF74FA68779901DCA1FD5 /* Action.swift */,
-				376E40D25D69EB415B030C5E9D889BE2 /* ActionGroup.swift */,
-				9317E56C7A5BE1CF4801E7EC06D1431A /* AsyncAction.swift */,
-				FB7BDF2DA879CEA71FF97674C356BA61 /* Atlas.swift */,
-				58E664BC04617F8CD326619E794176B9 /* AtomSubscriber.swift */,
-				55634A3CD4EED4892FCF122B96EF600E /* Subscriber.swift */,
-				D482814D8E880877E085AFCCD7635205 /* SubscriberBox.swift */,
-				618B85C4779BB235553C2889729AB16E /* Pod */,
-				67674B92F3C2378F7B26D0B9F6E0D157 /* Support Files */,
-			);
-			name = Atlas;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		32A23E08346748F1793F899C5FF672C1 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -146,38 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C73908CAC1F118FBC75DACE885DE348 /* Products */ = {
+		68E6D5B49FE246A987A19D71B8F7847E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BD57EB07E5DF774DFBCDB3DAB261E35 /* Atlas.framework */,
-				A6949511A3FCC5E380F86A06EDB0BA75 /* Pods_Atlas_Example.framework */,
-				C78AB3803EA54715C0AFA98CE453DD80 /* Pods_Atlas_Tests.framework */,
+				AE2113DCA9F5EC2661FAE184C161CB1C /* AtlasSwift.framework */,
+				F1F1B07772D38FA286A26417D6220593 /* Pods_Atlas_Example.framework */,
+				2BCEA90BF6CDAA1325970FE69695E843 /* Pods_Atlas_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		618B85C4779BB235553C2889729AB16E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				9647E5884CEB985B666592D43D93B0C5 /* Atlas.podspec */,
-				15816339B208EFFACD69574FAD5352E2 /* LICENSE.md */,
-				8180C0DB85A6FB85D5D9C206EB063A74 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		67674B92F3C2378F7B26D0B9F6E0D157 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8FB2266D8E0041B57CA03373F35A32E /* Atlas.modulemap */,
-				F69CA3A6EEBC93B3CA2A57FB54764BC7 /* Atlas.xcconfig */,
-				9E1A6C7255A2706B5A554D72F24509BD /* Atlas-dummy.m */,
-				99DDCD6DE89535C0C8C3E4F48C68349C /* Atlas-prefix.pch */,
-				ADCD5145ECDB761390C7CCA1DB3E05A7 /* Atlas-umbrella.h */,
-				35571CD7A112A665F8475EF0BDE71EBA /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Atlas";
 			sourceTree = "<group>";
 		};
 		79BC7446B3ADCE9CC0350F72F351881C /* Pods-Atlas_Tests */ = {
@@ -202,12 +162,29 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				A77F50F693E4C6C58C195B1508549864 /* Development Pods */,
+				9C00CA261DC787CA6F5C37B675617046 /* Development Pods */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				9758CC519AE2C57A9659FFC01AAD26F9 /* Pods */,
-				3C73908CAC1F118FBC75DACE885DE348 /* Products */,
+				68E6D5B49FE246A987A19D71B8F7847E /* Products */,
 				E9C0310669B52B12146E6C934F77D533 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9391ECEBFE089EA0474F623485869E62 /* AtlasSwift */ = {
+			isa = PBXGroup;
+			children = (
+				DFFF5AFEA9CDCFAA96D6726BA280A702 /* Action.swift */,
+				297DDD590D316E69C936ECAAD902F644 /* ActionGroup.swift */,
+				CB66F15B50F0BFD1D7145F2F0997A855 /* AsyncAction.swift */,
+				6DA2D8BBE514DFB7A4178C63E01D8D68 /* Atlas.swift */,
+				9D1B9B6B1F10C651EB1B9E4A32D412C9 /* AtomSubscriber.swift */,
+				34839A6F554C727CD3443C633A6A1F6E /* Subscriber.swift */,
+				9CA688951C7A9DB37ADB923113D5CEF4 /* SubscriberBox.swift */,
+				EDBC1E9918F70C475184017E7512A0D0 /* Pod */,
+				ADF6410E9AD97B98604E55E59B7EDE11 /* Support Files */,
+			);
+			name = AtlasSwift;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		9758CC519AE2C57A9659FFC01AAD26F9 /* Pods */ = {
@@ -218,12 +195,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A77F50F693E4C6C58C195B1508549864 /* Development Pods */ = {
+		9C00CA261DC787CA6F5C37B675617046 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				26397B1DB03B5D2162C5B9C196E74525 /* Atlas */,
+				9391ECEBFE089EA0474F623485869E62 /* AtlasSwift */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		ADF6410E9AD97B98604E55E59B7EDE11 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13110DF0FA1149CC8B4BCFF272A375F5 /* AtlasSwift.modulemap */,
+				71978BED2E9E8C77EA2CC2D47397D66C /* AtlasSwift.xcconfig */,
+				14B91E106C4258229D87F9E1528AA3D1 /* AtlasSwift-dummy.m */,
+				B52EA67B9FC4347389C47DFFFB24C608 /* AtlasSwift-prefix.pch */,
+				7A4BDF991C7EC5648719F29B3B58EDFE /* AtlasSwift-umbrella.h */,
+				DE0813BBC5A612C5BA9EC8F596C6D84F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AtlasSwift";
 			sourceTree = "<group>";
 		};
 		E9C0310669B52B12146E6C934F77D533 /* Targets Support Files */ = {
@@ -233,6 +224,16 @@
 				79BC7446B3ADCE9CC0350F72F351881C /* Pods-Atlas_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EDBC1E9918F70C475184017E7512A0D0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				64785BC10332709E7667358F9A679823 /* AtlasSwift.podspec */,
+				07CE688382FDBCCFF9019355ED66085B /* LICENSE */,
+				76049C64937BCAFEB2AA29275F08ECF5 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		EE58EB43BD3B179C012781DCDB59E4EE /* Pods-Atlas_Example */ = {
@@ -264,84 +265,84 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		253257EEA629C18062B5448D72D4BA8A /* Headers */ = {
+		09871C5BA628060E62B6203338D174CC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FE23FC1DAB96400A27B945E2DF07319 /* Atlas-umbrella.h in Headers */,
+				BBFDE41A0D22042C356A2841AF35F8D0 /* Pods-Atlas_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F85E88B9C0B284290AEE4C9B4ECF5F7 /* Headers */ = {
+		EB4E10F953616203FFC40E8B635767E9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				302C148686C08F5548505B8E10D62C74 /* Pods-Atlas_Tests-umbrella.h in Headers */,
+				6A96A614ADAD95867F929B29A105242D /* Pods-Atlas_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B649C2D8D87637FA4FFB21303A7DF577 /* Headers */ = {
+		F6612DF2B4747715B2AC5389D4513F5A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20C1D76B7ED013BDFF8B1940C527E56 /* Pods-Atlas_Example-umbrella.h in Headers */,
+				6B3347C1F9234D9D2B169465B52912A8 /* AtlasSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		986B2DD36A803CAD942C471A5587E3B7 /* Atlas */ = {
+		1C7CF85D15973D4FEADCDD4711E9C360 /* AtlasSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A3EEE33AFEE7798C1BEC02939E92EFD /* Build configuration list for PBXNativeTarget "Atlas" */;
+			buildConfigurationList = BCF4BF18347E405C424B78C2A33A77B4 /* Build configuration list for PBXNativeTarget "AtlasSwift" */;
 			buildPhases = (
-				169ABE2899678635C6787BAE9A50A787 /* Sources */,
-				B58EA93A20E4836923D156F5DD7FA441 /* Frameworks */,
-				253257EEA629C18062B5448D72D4BA8A /* Headers */,
+				0F7E4B16AE73BC87A85E88C3FD64672C /* Sources */,
+				3B1CC983859BCFDBE0FEA6FB49A81C37 /* Frameworks */,
+				F6612DF2B4747715B2AC5389D4513F5A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Atlas;
-			productName = Atlas;
-			productReference = 4BD57EB07E5DF774DFBCDB3DAB261E35 /* Atlas.framework */;
+			name = AtlasSwift;
+			productName = AtlasSwift;
+			productReference = AE2113DCA9F5EC2661FAE184C161CB1C /* AtlasSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B423882F812851F930513AB27EA8E3E7 /* Pods-Atlas_Example */ = {
+		46A376A4168440466727552052800A36 /* Pods-Atlas_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6AB3263AF3C12335559FEEA03BA575E /* Build configuration list for PBXNativeTarget "Pods-Atlas_Example" */;
+			buildConfigurationList = DB0E8778472FB848E83216FDE3ED00DC /* Build configuration list for PBXNativeTarget "Pods-Atlas_Example" */;
 			buildPhases = (
-				3BC775BFD9EEB8CEF6E5E6E5A8D88423 /* Sources */,
-				002085A021447B3BD388E5F24B26411C /* Frameworks */,
-				B649C2D8D87637FA4FFB21303A7DF577 /* Headers */,
+				869839903481DFB1C2EF9EC185AA5FCD /* Sources */,
+				91D988E73935C770FDA1D6E8F44FADAE /* Frameworks */,
+				EB4E10F953616203FFC40E8B635767E9 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7B91700BE8A8D12D37228D639998EC5E /* PBXTargetDependency */,
+				221D0563F27BFC6740472EB69A81DF25 /* PBXTargetDependency */,
 			);
 			name = "Pods-Atlas_Example";
 			productName = "Pods-Atlas_Example";
-			productReference = A6949511A3FCC5E380F86A06EDB0BA75 /* Pods_Atlas_Example.framework */;
+			productReference = F1F1B07772D38FA286A26417D6220593 /* Pods_Atlas_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D0342B5B4D9F74602B94E1042011AC71 /* Pods-Atlas_Tests */ = {
+		AF3ED72A62A8A8AA2B5CB7471B5C84E2 /* Pods-Atlas_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA11BFDFC451AAFF9B6967F19F84D2C3 /* Build configuration list for PBXNativeTarget "Pods-Atlas_Tests" */;
+			buildConfigurationList = FE804A6758C9F7618F9718877F585A78 /* Build configuration list for PBXNativeTarget "Pods-Atlas_Tests" */;
 			buildPhases = (
-				8E7DDD23BE66DBCC32E3D8CBED405478 /* Sources */,
-				4F7F2938DE2DC0009286019FC4FB0757 /* Frameworks */,
-				6F85E88B9C0B284290AEE4C9B4ECF5F7 /* Headers */,
+				5ACB052134E07550BD243A96750E9B03 /* Sources */,
+				9C7A760A972BB82AD63EACB53C8E15F2 /* Frameworks */,
+				09871C5BA628060E62B6203338D174CC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E872C2CAE3BD7EFAEE15F77B1DFC81F6 /* PBXTargetDependency */,
+				B577B84FCADBA041DDEE51C1A774377A /* PBXTargetDependency */,
 			);
 			name = "Pods-Atlas_Tests";
 			productName = "Pods-Atlas_Tests";
-			productReference = C78AB3803EA54715C0AFA98CE453DD80 /* Pods_Atlas_Tests.framework */;
+			productReference = 2BCEA90BF6CDAA1325970FE69695E843 /* Pods_Atlas_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -361,140 +362,68 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3C73908CAC1F118FBC75DACE885DE348 /* Products */;
+			productRefGroup = 68E6D5B49FE246A987A19D71B8F7847E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				986B2DD36A803CAD942C471A5587E3B7 /* Atlas */,
-				B423882F812851F930513AB27EA8E3E7 /* Pods-Atlas_Example */,
-				D0342B5B4D9F74602B94E1042011AC71 /* Pods-Atlas_Tests */,
+				1C7CF85D15973D4FEADCDD4711E9C360 /* AtlasSwift */,
+				46A376A4168440466727552052800A36 /* Pods-Atlas_Example */,
+				AF3ED72A62A8A8AA2B5CB7471B5C84E2 /* Pods-Atlas_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		169ABE2899678635C6787BAE9A50A787 /* Sources */ = {
+		0F7E4B16AE73BC87A85E88C3FD64672C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88AD3F1AF5E243B73F7423B0FDF80A0 /* Action.swift in Sources */,
-				97E7CAA479E87F9CA8F192486E2B3A33 /* ActionGroup.swift in Sources */,
-				79BC763123863F3D998DC03E9FDCEF00 /* AsyncAction.swift in Sources */,
-				278365CBDAEE62E271FD08EA81429266 /* Atlas-dummy.m in Sources */,
-				BD9DF52CFB27D27F6A7D0F23481C13AD /* Atlas.swift in Sources */,
-				E224D0E69D185C06571BF136380A3336 /* AtomSubscriber.swift in Sources */,
-				923F9F7F4486BF3699D2D5B442D64E0A /* Subscriber.swift in Sources */,
-				133CC137C054BB4745FF0F2B338471BB /* SubscriberBox.swift in Sources */,
+				0ECD9DB7F8757E17AC2FA7F3A9601D9C /* Action.swift in Sources */,
+				7203E1639238D2C13E58171915988C11 /* ActionGroup.swift in Sources */,
+				2717B59F9D9170B312C185CA24DF93FC /* AsyncAction.swift in Sources */,
+				11AD6452CA4137662BFBC9BCAB0981C8 /* Atlas.swift in Sources */,
+				39D85B41DF1FE42C1DFD1B6BEDEC5F77 /* AtlasSwift-dummy.m in Sources */,
+				68B57BB173AE1DF3090B0C7588F3D39A /* AtomSubscriber.swift in Sources */,
+				CD819BF3F5ACBA23B3F3BFDE1239B194 /* Subscriber.swift in Sources */,
+				D7C584AC627B2F349A4488457424F855 /* SubscriberBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BC775BFD9EEB8CEF6E5E6E5A8D88423 /* Sources */ = {
+		5ACB052134E07550BD243A96750E9B03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C402E01D28617B06F1419B76BC7378E /* Pods-Atlas_Example-dummy.m in Sources */,
+				DFDCE4798224D132417E68CAFE0A9AE0 /* Pods-Atlas_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E7DDD23BE66DBCC32E3D8CBED405478 /* Sources */ = {
+		869839903481DFB1C2EF9EC185AA5FCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B3A5C83F1450A8B76D962F7AAA5C23 /* Pods-Atlas_Tests-dummy.m in Sources */,
+				5E1D025BE6AD54DA8D9A74691157F1B0 /* Pods-Atlas_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B91700BE8A8D12D37228D639998EC5E /* PBXTargetDependency */ = {
+		221D0563F27BFC6740472EB69A81DF25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Atlas;
-			target = 986B2DD36A803CAD942C471A5587E3B7 /* Atlas */;
-			targetProxy = 09E640676DC85D6FE1E1BEF35A992185 /* PBXContainerItemProxy */;
+			name = AtlasSwift;
+			target = 1C7CF85D15973D4FEADCDD4711E9C360 /* AtlasSwift */;
+			targetProxy = 43040612D80011A2120CA2BFE519DAB4 /* PBXContainerItemProxy */;
 		};
-		E872C2CAE3BD7EFAEE15F77B1DFC81F6 /* PBXTargetDependency */ = {
+		B577B84FCADBA041DDEE51C1A774377A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Atlas;
-			target = 986B2DD36A803CAD942C471A5587E3B7 /* Atlas */;
-			targetProxy = 7C17A8A23D7D6A53D890ED302B4D61FD /* PBXContainerItemProxy */;
+			name = AtlasSwift;
+			target = 1C7CF85D15973D4FEADCDD4711E9C360 /* AtlasSwift */;
+			targetProxy = D544FECCF58B03D1AF93372AEBE68DDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0CB9CD9DBEC54296FAD76DFBE6A28946 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3A49AEF2CB2FA72CDEBA4C0F8C10DCD /* Pods-Atlas_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Atlas_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Atlas_Tests/Pods-Atlas_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1349D6D3E8FDEE11D6E32778E23CD8A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A169CD65D56F3BEF5AAA1B0BDA06E449 /* Pods-Atlas_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Atlas_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1A1FD64F86BA6B2102C6A7C081567EAD /* Debug */ = {
+		70F1C743F983C81452D387778F7BF842 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C56A1DFC631053FEFB9A42C24EB41FA2 /* Pods-Atlas_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -531,9 +460,9 @@
 			};
 			name = Debug;
 		};
-		72B27C960B0270E2FCDE1E0102F4A8C9 /* Release */ = {
+		725CDCB0C1936754196529300E99F603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F69CA3A6EEBC93B3CA2A57FB54764BC7 /* Atlas.xcconfig */;
+			baseConfigurationReference = 71978BED2E9E8C77EA2CC2D47397D66C /* AtlasSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -546,19 +475,52 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Atlas/Atlas-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Atlas/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AtlasSwift/AtlasSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AtlasSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Atlas/Atlas.modulemap";
-				PRODUCT_MODULE_NAME = Atlas;
-				PRODUCT_NAME = Atlas;
+				MODULEMAP_FILE = "Target Support Files/AtlasSwift/AtlasSwift.modulemap";
+				PRODUCT_MODULE_NAME = AtlasSwift;
+				PRODUCT_NAME = AtlasSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D6140158713CCC2A3156EB6DF02B2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71978BED2E9E8C77EA2CC2D47397D66C /* AtlasSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/AtlasSwift/AtlasSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AtlasSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/AtlasSwift/AtlasSwift.modulemap";
+				PRODUCT_MODULE_NAME = AtlasSwift;
+				PRODUCT_NAME = AtlasSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -627,10 +589,12 @@
 			};
 			name = Debug;
 		};
-		B6A08D46F852F5DD9F695BF414DE556C /* Debug */ = {
+		C7251F1F4AE4B2959865E9D4E9DEA8ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F69CA3A6EEBC93B3CA2A57FB54764BC7 /* Atlas.xcconfig */;
+			baseConfigurationReference = F3A49AEF2CB2FA72CDEBA4C0F8C10DCD /* Pods-Atlas_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -642,23 +606,97 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Atlas/Atlas-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Atlas/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Atlas_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/Atlas/Atlas.modulemap";
-				PRODUCT_MODULE_NAME = Atlas;
-				PRODUCT_NAME = Atlas;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Atlas_Tests/Pods-Atlas_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8DC6428FF27B567FF3AC12430B993C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84C03F5BABBCE6B69C8244A7FAD0A067 /* Pods-Atlas_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Atlas_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		CAF8C176DA23E5CD52B798CF36065E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A169CD65D56F3BEF5AAA1B0BDA06E449 /* Pods-Atlas_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Atlas_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		E574923E2959CFEF4FEBC7B272DBC6AD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -718,43 +756,6 @@
 			};
 			name = Release;
 		};
-		F2BC3D5B07E62E12034949DD48905316 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84C03F5BABBCE6B69C8244A7FAD0A067 /* Pods-Atlas_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Atlas_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Atlas_Example/Pods-Atlas_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -767,29 +768,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A3EEE33AFEE7798C1BEC02939E92EFD /* Build configuration list for PBXNativeTarget "Atlas" */ = {
+		BCF4BF18347E405C424B78C2A33A77B4 /* Build configuration list for PBXNativeTarget "AtlasSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6A08D46F852F5DD9F695BF414DE556C /* Debug */,
-				72B27C960B0270E2FCDE1E0102F4A8C9 /* Release */,
+				725CDCB0C1936754196529300E99F603 /* Debug */,
+				7D6140158713CCC2A3156EB6DF02B2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6AB3263AF3C12335559FEEA03BA575E /* Build configuration list for PBXNativeTarget "Pods-Atlas_Example" */ = {
+		DB0E8778472FB848E83216FDE3ED00DC /* Build configuration list for PBXNativeTarget "Pods-Atlas_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F2BC3D5B07E62E12034949DD48905316 /* Debug */,
-				1349D6D3E8FDEE11D6E32778E23CD8A0 /* Release */,
+				C8DC6428FF27B567FF3AC12430B993C8 /* Debug */,
+				CAF8C176DA23E5CD52B798CF36065E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA11BFDFC451AAFF9B6967F19F84D2C3 /* Build configuration list for PBXNativeTarget "Pods-Atlas_Tests" */ = {
+		FE804A6758C9F7618F9718877F585A78 /* Build configuration list for PBXNativeTarget "Pods-Atlas_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A1FD64F86BA6B2102C6A7C081567EAD /* Debug */,
-				0CB9CD9DBEC54296FAD76DFBE6A28946 /* Release */,
+				70F1C743F983C81452D387778F7BF842 /* Debug */,
+				C7251F1F4AE4B2959865E9D4E9DEA8ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

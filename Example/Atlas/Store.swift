@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Atlas
+import AtlasSwift
 
 struct CountState {
     var count: Int

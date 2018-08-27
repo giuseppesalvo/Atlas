@@ -1,5 +1,5 @@
 import XCTest
-import Atlas
+import AtlasSwift
 
 struct CountState {
     var count: Int

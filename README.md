@@ -2,10 +2,9 @@
 
 Atlas is a redux store for your swift apps without the reducer layer
 
-[![CI Status](https://img.shields.io/travis/Giuseppe/Atlas.svg?style=flat)](https://travis-ci.org/Giuseppe/Atlas)
-[![Version](https://img.shields.io/cocoapods/v/Atlas.svg?style=flat)](https://cocoapods.org/pods/Atlas)
-[![License](https://img.shields.io/cocoapods/l/Atlas.svg?style=flat)](https://cocoapods.org/pods/Atlas)
-[![Platform](https://img.shields.io/cocoapods/p/Atlas.svg?style=flat)](https://cocoapods.org/pods/Atlas)
+[![Version](https://img.shields.io/cocoapods/v/AtlasSwift.svg?style=flat)](https://cocoapods.org/pods/AtlasSwift)
+[![License](https://img.shields.io/cocoapods/l/AtlasSwift.svg?style=flat)](https://cocoapods.org/pods/AtlasSwift)
+[![Platform](https://img.shields.io/cocoapods/p/AtlasSwift.svg?style=flat)](https://cocoapods.org/pods/AtlasSwift)
 
 ## Installation
 

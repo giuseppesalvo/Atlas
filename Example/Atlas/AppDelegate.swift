@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Atlas
+import AtlasSwift
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

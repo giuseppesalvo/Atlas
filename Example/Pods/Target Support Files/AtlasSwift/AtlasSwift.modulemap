@@ -1,0 +1,6 @@
+framework module AtlasSwift {
+  umbrella header "AtlasSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

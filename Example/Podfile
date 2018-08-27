@@ -1,11 +1,11 @@
 use_frameworks!
 
 target 'Atlas_Example' do
-  pod 'Atlas', :path => '../'
+  pod 'AtlasSwift', :path => '../'
   pod 'SwiftLint'
 end
 
 target 'Atlas_Tests' do
-    pod 'Atlas', :path => '../'
+    pod 'AtlasSwift', :path => '../'
     pod 'SwiftLint'
 end

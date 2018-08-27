@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Atlas
+import AtlasSwift
 
 class ViewController: NSViewController {
 
