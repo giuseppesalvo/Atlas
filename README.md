@@ -81,18 +81,18 @@ store.dispatch(Increment()) { state in
 
 ```swift
 
-struct CounterAction: AtlasActionGroup {
-    func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
+struct CountOperation: AtlasActionGroup {
+    func handle(store: Atlas<CountState>, completition: @escaping () -> Void) {
         store.dispatch(Increment())
         store.dispatch(Increment())
-        // Since the store internal queue is serial, this callback will be the real end of the actionGroup
+        store.dispatch(Increment())
         store.dispatch(Decrement()) { _ in
             completition()
         }
     }
 }
 
-store.dispatch(CounterAction()) { state in
+store.dispatch(CountOperation()) { state in
     print("done! ", state.count)
 }
 
@@ -160,7 +160,7 @@ let countSubscriber = AtlasAtomSubscriber(store: countStore) { [weak self] state
 ```
 
 Notes
-- Atlas uses a serial queue to dispatch every action, so you can be sure that your actions will be exectuted in the invokation order
+- Atlas uses a serial queue to dispatch every action, so you can be sure that your actions will be executed in the invokation order
 - The dispatch function is async, to avoid deadlocks. To track its end, you can use the completition argument
 - The subcribe function also have a second argument "queue", to subscribe a class on a specific queue
 
