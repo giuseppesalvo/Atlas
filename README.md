@@ -126,7 +126,7 @@ class YourController: UIViewController, AtlasSubscriber {
 
 ```swift
 
-class YourController: UIViewController, AtlasSubscriber {
+class YourController: UIViewController {
 
     var countSubscriber : AtlasAtomSubscriber<CountState>!
     var todoSubscriber  : AtlasAtomSubscriber<TodoState>!
