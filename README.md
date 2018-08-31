@@ -51,6 +51,9 @@ struct Increment: AtlasAction {
     }
 }
 
+store.dispatch(Increment())
+
+// With a completition callback
 store.dispatch(Increment()) { state in
     print("done! ", state.count)
 }
@@ -71,9 +74,8 @@ struct Increment: AtlasAsyncAction {
     }
 }
 
-store.dispatch(Increment()) { state in
-    print("done! ", state.count)
-}
+// With a completition callback
+store.dispatch(Increment())
 
 ```
 
@@ -92,10 +94,7 @@ struct CountOperation: AtlasActionGroup {
     }
 }
 
-store.dispatch(CountOperation()) { state in
-    print("done! ", state.count)
-}
-
+store.dispatch(CountOperation())
 ```
 
 ### Subscription
