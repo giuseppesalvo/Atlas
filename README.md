@@ -23,7 +23,7 @@ pod 'AtlasSwift'
 - Actions
 - Guards
 
-### Initializing
+## State
 
 ```swift
 
@@ -38,11 +38,11 @@ let store = Atlas(state: CountState(
 
 ```
 
-### Actions
+## Actions
+
+Actions can be synchronous or asynchronous
 
 ```swift
-
-// Actions can be synchronous or asynchronous
 
 struct Increment: AtlasAction {
     func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
@@ -77,6 +77,28 @@ struct CountOperation: AtlasActionGroup {
 }
 
 store.dispatch(CountOperation())
+```
+
+## Guards
+
+Guards track the store lifecycle.
+In future, they will include also a middleware-like function.
+
+```swift
+
+struct Logger: AtlasGuard {
+
+    func willUpdate<A: AtlasAction>(state: State, action: A) {
+        print("will update!", state.count)
+    }
+    
+    func didUpdate<A: AtlasAction>(state: State, action: A) {
+        print("update!", state.count)
+    }
+}
+
+let store = Atlas(state: YourState(), guards: [ Logger() ])
+
 ```
 
 ### Subscription
@@ -118,28 +140,6 @@ extension YourController: AtlasSubscriber {
         return prevState?.count != newState.count
     }
 }
-
-```
-
-### Guards
-
-Guards track the store lifecycle.
-In future, they will include also a middleware-like function.
-
-```swift
-
-struct Logger: AtlasGuard {
-
-    func willUpdate<A: AtlasAction>(state: State, action: A) {
-        print("will update!", state.count)
-    }
-    
-    func didUpdate<A: AtlasAction>(state: State, action: A) {
-        print("update!", state.count)
-    }
-}
-
-let store = Atlas(state: YourState(), guards: [ Logger() ])
 
 ```
 
