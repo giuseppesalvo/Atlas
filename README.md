@@ -17,7 +17,7 @@ pod 'AtlasSwift'
 
 ## How it works
 
-**there are only 2 components**
+**there are 3 main components**
 
 - State
 - Actions
@@ -45,7 +45,7 @@ let store = Atlas(state: CountState(
 // Actions can be synchronous or asynchronous
 
 struct Increment: AtlasAction {
-    func handle(state: CountState, completition: AtlasActionCompletition<CountState>) {
+    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
         var newState   = state
         newState.count = result
         completition(newState)
@@ -66,7 +66,7 @@ store.dispatch(Increment()) { state in
 ```swift
 
 struct CountOperation: AtlasActionGroup {
-    func handle(store: Atlas<CountState>, completition: @escaping () -> Void) {
+    func handle(store: Atlas<CountState>, completition: @escaping AtlasActionGroupCompletition) {
         store.dispatch(Increment())
         store.dispatch(Increment())
         store.dispatch(Increment())
@@ -90,7 +90,7 @@ extension YourController: AtlasSubscriber {
         store.subscribe(self)
     }
     
-    // There is no need to unsubscribe your objects. Everything is managed with weak vars
+    // There is no real need to unsubscribe your objects. Subscribers are weak references
     override func viewWillDisappear() {
         super.viewWillDisappear()
         store.unsubscribe(self)
@@ -123,15 +123,17 @@ extension YourController: AtlasSubscriber {
 
 ### Guards
 
-Guards are simple classes that track the store lifecycle
+Guards track the store lifecycle.
 In future, they will include also a middleware-like function.
 
 ```swift
 
 struct Logger: AtlasGuard {
+
     func willUpdate<A: AtlasAction>(state: State, action: A) {
         print("will update!", state.count)
     }
+    
     func didUpdate<A: AtlasAction>(state: State, action: A) {
         print("update!", state.count)
     }
