@@ -19,7 +19,7 @@ public class Atlas<T> {
     
     private(set) public var state: T
     
-    private var listeners: Set<AtlasSubscriberBox> = []
+    private var subscribers: Set<AtlasSubscriberBox> = []
     
     private let guards: [AtlasAnyGuard]
     
@@ -54,10 +54,10 @@ extension Atlas {
 extension Atlas {
     
     /**
-     * Trigger state changes on a subscriber
+     * Trigger state changes on a subscriber.
      *
      */
-    private func updateListener(
+    private func updateSubscriber(
         box: AtlasSubscriberBox,
         prevState: T?,
         newState: T
@@ -74,12 +74,12 @@ extension Atlas {
      * Triggering all subscribers
      *
      */
-    private func updateListeners(
+    private func updateSubscribers(
         prevState: T?,
         newState: T
     ) {
-        for box in listeners {
-            updateListener(box: box, prevState: prevState, newState: newState)
+        for box in subscribers {
+            updateSubscriber(box: box, prevState: prevState, newState: newState)
         }
     }
 }
@@ -90,26 +90,26 @@ extension Atlas {
 extension Atlas {
     
     /**
-     * Subscribing a class
+     * Subscribing a class.
      *
      */
     public func subscribe<S: AtlasSubscriber>(
         _ subscriber: S, queue: DispatchQueue = .main
     ) where S.StateType == T {
         let box = AtlasSubscriberBox(value: subscriber, queue: queue)
-        listeners.update(with: box)
-        updateListener(box: box, prevState: nil, newState: self.state)
+        subscribers.update(with: box)
+        updateSubscriber(box: box, prevState: nil, newState: self.state)
     }
     
     /**
-     * Unsubscribing a class
+     * Unsubscribing a class.
      *
      */
     public func unsubscribe<S: AtlasSubscriber>(
         _ subscriber: S
     ) where S.StateType == T {
-        if let index = self.listeners.index(where: { $0.value === subscriber }) {
-            self.listeners.remove(at: index)
+        if let index = self.subscribers.index(where: { $0.value === subscriber }) {
+            self.subscribers.remove(at: index)
         }
     }
   
@@ -136,7 +136,7 @@ extension Atlas {
 extension Atlas {
     
     /**
-     * Dispatching an action
+     * Dispatch an action.
      *
      */
     public func dispatch<A: AtlasAction>(
@@ -151,18 +151,18 @@ extension Atlas {
                 self.setState(state)
                 self.semaphore.signal()
                 completition?(self.state)
-                self.updateListeners(prevState: oldState, newState: self.state)
+                self.updateSubscribers(prevState: oldState, newState: self.state)
                 self.guardsDidUpdate(state: self.state, action: action)
             }
         }
     }
     
     /**
-     * Thread unsafe dispatch action
-     * Here the semaphore will not be used
-     * So, multiple actions dispatched sequentially using this function, will have the same state
+     * Thread unsafe dispatch action.
+     * Here the **semaphore** will not be used.
+     * So, multiple actions dispatched sequentially using this function, will have the same state.
      */
-    public func dispatchUnsafe<A: AtlasAction>(
+    public func dispatchUNSAFE<A: AtlasAction>(
         _ action: A,
         completition: AtlasDispatchCompletition<T>? = nil
     ) where A.StateType == T {
@@ -172,7 +172,7 @@ extension Atlas {
                 let oldState = self.state
                 self.state = state
                 completition?(self.state)
-                self.updateListeners(prevState: oldState, newState: self.state)
+                self.updateSubscribers(prevState: oldState, newState: self.state)
                 self.guardsWillUpdate(state: self.state, action: action)
             }
         }
