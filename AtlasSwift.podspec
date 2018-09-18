@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'AtlasSwift'
   s.version          = '0.0.12'
-  s.summary          = 'Atlas is a redux store for your swift apps without the reducer layer'
+  s.summary          = 'Atlas is a redux-like store for your swift apps without the reducer layer'
 
   s.description      = <<-DESC
-                        Atlas is a redux like store for your swift iOS/macOS/tvOS apps without the reducer layer
+                        Atlas is a redux-like store for your swift iOS/macOS/tvOS apps without the reducer layer
                         DESC
   s.homepage         = 'https://github.com/giuseppesalvo/atlas'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
