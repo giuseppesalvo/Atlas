@@ -19,26 +19,62 @@ public class Atlas<T> {
     
     private var listeners: Set<AtlasSubscriberBox> = []
     
-    private let queue     : DispatchQueue     = DispatchQueue(label: "atlas.store.queue.\(T.self).\(UUID().uuidString)")
-    private let semaphore : DispatchSemaphore = DispatchSemaphore(value: 1)
+    // Serial queue for the state updates
+    private let queue: DispatchQueue = DispatchQueue(label: "atlas.store.queue.\(T.self).\(UUID().uuidString)")
+    
+    // The semaphore is needed to ensure that queue blocks will be dispatched strictly in the right order
+    // Without the semaphore, the order is not always right
+    private let semaphore: DispatchSemaphore = DispatchSemaphore(value: 1)
     
     public typealias CompletitionHandler = (_ state: T) -> Void
     
-    public init(initialState: T) {
-        guard Mirror(reflecting: initialState).displayStyle == .struct else {
+    public init(state: T) {
+        guard Mirror(reflecting: state).displayStyle == .struct else {
             fatalError("The state should be a struct")
         }
-        self.state = initialState
+        self.state = state
     }
+    
+    // Useful if we need to perform an action for every update
+    // Example: save state history
+    func setState(_ state: T) {
+        self.state = state
+    }
+    
+    /**
+     * Trigger state changes on a subscriber
+     *
+     */
+    private func updateListener(box: AtlasSubscriberBox, prevState: T?, newState: T) {
+        box.queue.async {
+            guard let subscriber = box.value else { return }
+            if subscriber.defaultShouldUpdate(prevState: prevState, newState: newState) {
+                subscriber.defaultNewState(self.state)
+            }
+        }
+    }
+    
+    /**
+     * Triggering all subscribers
+     *
+     */
+    private func updateListeners(prevState: T?, newState: T) {
+        for box in listeners {
+            updateListener(box: box, prevState: prevState, newState: newState)
+        }
+    }
+    
     
     /**
      * Subscribing a class
      *
      */
-    public func subscribe<S: AtlasSubscriber>(_ subscriber: S, queue: DispatchQueue = .main) where S.StateType == T {
+    public func subscribe<S: AtlasSubscriber>(
+        _ subscriber: S, queue: DispatchQueue = .main
+    ) where S.StateType == T {
         let box = AtlasSubscriberBox(value: subscriber, queue: queue)
-        self.listeners.update(with: box)
-        trigger(box: box)
+        listeners.update(with: box)
+        updateListener(box: box, prevState: nil, newState: self.state)
     }
     
     /**
@@ -52,34 +88,18 @@ public class Atlas<T> {
     }
     
     /**
-     * Trigger state changes on a subscriber
-     *
-     */
-    private func trigger(box: AtlasSubscriberBox) {
-        box.queue.async { box.value?.defaultNewState(self.state) }
-    }
-    
-    /**
-     * Triggering all subscribers
-     *
-     */
-    private func triggerAll() {
-        for box in listeners {
-            self.trigger(box: box)
-        }
-    }
-    
-    /**
      * Dispatching a synchronous action
      *
      */
     public func dispatch<A: AtlasAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
         queue.async {
             self.semaphore.wait()
-            self.state = action.handle(state: self.state)
+            let oldState = self.state
+            let newState = action.handle(state: oldState)
+            self.setState(newState)
             self.semaphore.signal()
-            self.triggerAll()
             completition?(self.state)
+            self.updateListeners(prevState: oldState, newState: self.state)
         }
     }
     
@@ -89,10 +109,11 @@ public class Atlas<T> {
      */
     public func dispatch<A: AtlasAsyncAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
         let block = { (_ state: T) -> Void in
-            self.state = state
+            let oldState = self.state
+            self.setState(state)
             self.semaphore.signal()
             completition?(self.state)
-            self.triggerAll()
+            self.updateListeners(prevState: oldState, newState: self.state)
         }
         
         queue.async {
@@ -108,9 +129,10 @@ public class Atlas<T> {
      */
     public func dispatchUnsafe<A: AtlasAsyncAction>(_ action: A, completition: CompletitionHandler? = nil) where A.StateType == T {
         let block = { (_ state: T) -> Void in
+            let oldState = self.state
             self.state = state
             completition?(self.state)
-            self.triggerAll()
+            self.updateListeners(prevState: oldState, newState: self.state)
         }
         
         queue.async {

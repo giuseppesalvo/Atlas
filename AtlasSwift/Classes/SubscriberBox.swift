@@ -9,6 +9,7 @@
 import Foundation
 
 class AtlasSubscriberBox: Hashable {
+    
     var hashValue: Int {
         return ObjectIdentifier(self).hashValue
     }

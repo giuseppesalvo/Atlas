@@ -23,13 +23,18 @@ class ViewController: NSViewController {
 }
 
 extension ViewController: AtlasSubscriber {
+    
     override func viewWillAppear() {
         super.viewWillAppear()
         store.subscribe(self)
     }
     
-    func newState(_ state: CountState) {
-        count.stringValue = String(state.count)
+    func shouldUpdate(prevState: State?, newState: State) -> Bool {
+        return prevState?.count.value != newState.count.value
+    }
+    
+    func newState(_ state: State) {
+        count.stringValue = String(state.count.value)
     }
 }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		39D85B41DF1FE42C1DFD1B6BEDEC5F77 /* AtlasSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B91E106C4258229D87F9E1528AA3D1 /* AtlasSwift-dummy.m */; };
 		3DBD3BBC052BD0D3359A86032589FE58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
 		5E1D025BE6AD54DA8D9A74691157F1B0 /* Pods-Atlas_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A12F60F7651656EA7B6A5B26EEEE4 /* Pods-Atlas_Example-dummy.m */; };
-		68B57BB173AE1DF3090B0C7588F3D39A /* AtomSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B9B6B1F10C651EB1B9E4A32D412C9 /* AtomSubscriber.swift */; };
 		6A96A614ADAD95867F929B29A105242D /* Pods-Atlas_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E91EB1DE88724D2E5F4D501CED10E36B /* Pods-Atlas_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B3347C1F9234D9D2B169465B52912A8 /* AtlasSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4BDF991C7EC5648719F29B3B58EDFE /* AtlasSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7203E1639238D2C13E58171915988C11 /* ActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DDD590D316E69C936ECAAD902F644 /* ActionGroup.swift */; };
@@ -43,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07CE688382FDBCCFF9019355ED66085B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		07CE688382FDBCCFF9019355ED66085B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		101B48EDB7CEE1F11E7362DA3354928D /* Pods-Atlas_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		13110DF0FA1149CC8B4BCFF272A375F5 /* AtlasSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AtlasSwift.modulemap; sourceTree = "<group>"; };
 		14B91E106C4258229D87F9E1528AA3D1 /* AtlasSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AtlasSwift-dummy.m"; sourceTree = "<group>"; };
@@ -51,27 +50,26 @@
 		1688492D703294130A79F65A69159E62 /* Pods-Atlas_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Atlas_Example.modulemap"; sourceTree = "<group>"; };
 		1AE885A9216C37213584B0E67B456575 /* Pods-Atlas_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Atlas_Tests.modulemap"; sourceTree = "<group>"; };
 		297DDD590D316E69C936ECAAD902F644 /* ActionGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionGroup.swift; path = AtlasSwift/Classes/ActionGroup.swift; sourceTree = "<group>"; };
-		2BCEA90BF6CDAA1325970FE69695E843 /* Pods_Atlas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Atlas_Tests.framework; path = "Pods-Atlas_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCEA90BF6CDAA1325970FE69695E843 /* Pods_Atlas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34839A6F554C727CD3443C633A6A1F6E /* Subscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscriber.swift; path = AtlasSwift/Classes/Subscriber.swift; sourceTree = "<group>"; };
 		34F73765ED574B113B19A7EEEB11F109 /* Pods-Atlas_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Atlas_Tests-dummy.m"; sourceTree = "<group>"; };
 		468800D7456ECCA7F9C9391E29776110 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49577974B45CFA6A5A20A87A48BA93F3 /* Pods-Atlas_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Example-resources.sh"; sourceTree = "<group>"; };
 		5103140B519FAEB3C060A39633BD2EFF /* Pods-Atlas_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Tests-resources.sh"; sourceTree = "<group>"; };
-		64785BC10332709E7667358F9A679823 /* AtlasSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AtlasSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		64785BC10332709E7667358F9A679823 /* AtlasSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AtlasSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6DA2D8BBE514DFB7A4178C63E01D8D68 /* Atlas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Atlas.swift; path = AtlasSwift/Classes/Atlas.swift; sourceTree = "<group>"; };
 		71978BED2E9E8C77EA2CC2D47397D66C /* AtlasSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AtlasSwift.xcconfig; sourceTree = "<group>"; };
-		76049C64937BCAFEB2AA29275F08ECF5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		76049C64937BCAFEB2AA29275F08ECF5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7A4BDF991C7EC5648719F29B3B58EDFE /* AtlasSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AtlasSwift-umbrella.h"; sourceTree = "<group>"; };
 		8001EA77D0E9C3ED4CFA64DCC84CAB86 /* Pods-Atlas_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Example-frameworks.sh"; sourceTree = "<group>"; };
 		84C03F5BABBCE6B69C8244A7FAD0A067 /* Pods-Atlas_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8E5230B928FC5E0C45C2E4A836A7E956 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CA688951C7A9DB37ADB923113D5CEF4 /* SubscriberBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscriberBox.swift; path = AtlasSwift/Classes/SubscriberBox.swift; sourceTree = "<group>"; };
-		9D1B9B6B1F10C651EB1B9E4A32D412C9 /* AtomSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AtomSubscriber.swift; path = AtlasSwift/Classes/AtomSubscriber.swift; sourceTree = "<group>"; };
 		A169CD65D56F3BEF5AAA1B0BDA06E449 /* Pods-Atlas_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AB74361E6CD48D398784A0E9D3A13611 /* Pods-Atlas_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Atlas_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		ADDB29145E28DBB17973F5A40CF423AD /* Pods-Atlas_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Atlas_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AE2113DCA9F5EC2661FAE184C161CB1C /* AtlasSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AtlasSwift.framework; path = AtlasSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2113DCA9F5EC2661FAE184C161CB1C /* AtlasSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AtlasSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52EA67B9FC4347389C47DFFFB24C608 /* AtlasSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AtlasSwift-prefix.pch"; sourceTree = "<group>"; };
 		BD0A12F60F7651656EA7B6A5B26EEEE4 /* Pods-Atlas_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Atlas_Example-dummy.m"; sourceTree = "<group>"; };
 		C56A1DFC631053FEFB9A42C24EB41FA2 /* Pods-Atlas_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 		DFFF5AFEA9CDCFAA96D6726BA280A702 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = AtlasSwift/Classes/Action.swift; sourceTree = "<group>"; };
 		E91EB1DE88724D2E5F4D501CED10E36B /* Pods-Atlas_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Atlas_Example-umbrella.h"; sourceTree = "<group>"; };
 		F043038F6C54B6A10682B5AA438351E1 /* Pods-Atlas_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Atlas_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F1F1B07772D38FA286A26417D6220593 /* Pods_Atlas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Atlas_Example.framework; path = "Pods-Atlas_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F1B07772D38FA286A26417D6220593 /* Pods_Atlas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A49AEF2CB2FA72CDEBA4C0F8C10DCD /* Pods-Atlas_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atlas_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F81E5E8B86451CE382A0D771587373A2 /* Pods-Atlas_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Atlas_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -177,7 +174,6 @@
 				297DDD590D316E69C936ECAAD902F644 /* ActionGroup.swift */,
 				CB66F15B50F0BFD1D7145F2F0997A855 /* AsyncAction.swift */,
 				6DA2D8BBE514DFB7A4178C63E01D8D68 /* Atlas.swift */,
-				9D1B9B6B1F10C651EB1B9E4A32D412C9 /* AtomSubscriber.swift */,
 				34839A6F554C727CD3443C633A6A1F6E /* Subscriber.swift */,
 				9CA688951C7A9DB37ADB923113D5CEF4 /* SubscriberBox.swift */,
 				EDBC1E9918F70C475184017E7512A0D0 /* Pod */,
@@ -383,7 +379,6 @@
 				2717B59F9D9170B312C185CA24DF93FC /* AsyncAction.swift in Sources */,
 				11AD6452CA4137662BFBC9BCAB0981C8 /* Atlas.swift in Sources */,
 				39D85B41DF1FE42C1DFD1B6BEDEC5F77 /* AtlasSwift-dummy.m in Sources */,
-				68B57BB173AE1DF3090B0C7588F3D39A /* AtomSubscriber.swift in Sources */,
 				CD819BF3F5ACBA23B3F3BFDE1239B194 /* Subscriber.swift in Sources */,
 				D7C584AC627B2F349A4488457424F855 /* SubscriberBox.swift in Sources */,
 			);

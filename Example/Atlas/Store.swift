@@ -10,25 +10,29 @@ import Foundation
 import AtlasSwift
 
 struct CountState {
-    var count: Int
+    var value: Int
 }
 
-var store = Atlas(initialState: CountState(
-    count: 0
+struct State {
+    var count: CountState
+}
+
+var store = Atlas(state: State(
+    count: CountState(value: 0)
 ))
 
 struct Increment: AtlasAction {
-    func handle(state: CountState) -> CountState {
+    func handle(state: State) -> State {
         var newState = state
-        newState.count += 1
+        newState.count.value += 1
         return newState
     }
 }
 
 struct Decrement: AtlasAction {
-    func handle(state: CountState) -> CountState {
+    func handle(state: State) -> State {
         var newState = state
-        newState.count -= 1
+        newState.count.value -= 1
         return newState
     }
 }

@@ -31,7 +31,7 @@ struct CountState {
     var count: Int
 }
 
-let store = Atlas(initialState: CountState(
+let store = Atlas(state: CountState(
     count: 0
 ))
 
@@ -102,7 +102,7 @@ store.dispatch(CountOperation()) { state in
 
 ```swift
 
-class YourController: UIViewController, AtlasSubscriber {
+extension YourController: AtlasSubscriber {
 
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -122,42 +122,22 @@ class YourController: UIViewController, AtlasSubscriber {
 
 ```
 
-### Subscribe to multiple stores
+Avoiding unneeded updates and subscribing to a specific part of the store
 
 ```swift
 
-class YourController: UIViewController {
+extension YourController: AtlasSubscriber {
 
-    var countSubscriber : AtlasAtomSubscriber<CountState>!
-    var todoSubscriber  : AtlasAtomSubscriber<TodoState>!
+    // subscription code...
 
-    func viewDidLoad() {
-        super.viewDidLoad()
-        countSubscriber = AtlasAtomSubscriber(store: countStore, callback: self.newCountState)
-        todoSubscriber  = AtlasAtomSubscriber(store: todoStore, callback: self.newTodoState)
+    func shouldUpdate(prevState: CountState?, newState: CountState) -> Bool {
+        return prevState?.count != newState.count
     }
-    
-    func newCountState(_ state: CountState) {
-        print("count state changed!")
-    }
-    
-    func newTodoState(_ state: TodoState) {
-        print("todo state changed!")
-    }
-
 }
 
 ```
 
-You can subscribe also with a block
-
-```swift
-
-let countSubscriber = AtlasAtomSubscriber(store: countStore) { [weak self] state in
-    print("new count state", state)
-}
-
-```
+This means that you can subscribe to specific parts of the store
 
 Notes
 - Atlas uses a serial queue to dispatch every action, so you can be sure that your actions will be executed in the invokation order
