@@ -52,6 +52,9 @@ struct Increment: AtlasAction {
     }
 }
 
+store.dispatch(Increment())
+
+// With a completition callback
 store.dispatch(Increment()) { state in
     print("done! ", state.count)
 }
@@ -73,10 +76,7 @@ struct CountOperation: AtlasActionGroup {
     }
 }
 
-store.dispatch(CountOperation()) { state in
-    print("done! ", state.count)
-}
-
+store.dispatch(CountOperation())
 ```
 
 ### Subscription
@@ -140,8 +140,6 @@ struct Logger: AtlasGuard {
 let store = Atlas(state: YourState(), guards: [ Logger() ])
 
 ```
-
-This means that you can subscribe to specific parts of the store
 
 Notes
 - Atlas uses a serial queue to dispatch every action, so you can be sure that your actions will be executed in the invokation order
