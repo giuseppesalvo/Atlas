@@ -40,7 +40,7 @@ struct LoggerGuard: AtlasGuard {
 // MARK: Actions
 
 struct Increment: AtlasAction {
-    func handle(state: State, completition: AtlasActionCompletition<State>) {
+    func handle(state: State, completition: @escaping AtlasActionCompletition<State>) {
         var newState = state
         newState.count.value += 1
         completition(newState)
@@ -48,7 +48,7 @@ struct Increment: AtlasAction {
 }
 
 struct Decrement: AtlasAction {
-    func handle(state: State, completition: AtlasActionCompletition<State>) {
+    func handle(state: State, completition: @escaping AtlasActionCompletition<State>) {
         var newState = state
         newState.count.value -= 1
         completition(newState)

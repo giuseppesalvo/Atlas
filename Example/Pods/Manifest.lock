@@ -1,5 +1,5 @@
 PODS:
-  - AtlasSwift (0.0.1)
+  - AtlasSwift (0.0.2)
   - SwiftLint (0.27.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AtlasSwift: a225958478811a10fc1ea476ff3fcca4ea8f4ca8
+  AtlasSwift: f6289dd921f0e13383bf19e9d1d978dacae749d8
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
 PODFILE CHECKSUM: 8c7b82979352548e71e031eff64bc75e23e9aed5

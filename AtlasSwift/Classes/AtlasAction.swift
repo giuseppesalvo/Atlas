@@ -12,5 +12,5 @@ public typealias AtlasActionCompletition<T> = (_ state: T) -> Void
 
 public protocol AtlasAction {
     associatedtype StateType
-    func handle(state: StateType, completition: AtlasActionCompletition<StateType>)
+    func handle(state: StateType, completition: @escaping AtlasActionCompletition<StateType>)
 }

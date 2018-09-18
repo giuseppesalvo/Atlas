@@ -6,23 +6,23 @@ struct CountState {
 }
 
 struct Increment: AtlasAction {
-    func handle(state: CountState) -> CountState {
+    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
         var newState = state
         newState.count += 1
-        return newState
+        completition(newState)
     }
 }
 
 struct Decrement: AtlasAction {
-    func handle(state: CountState) -> CountState {
+    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
         var newState = state
         newState.count -= 1
-        return newState
+        completition(newState)
     }
 }
 
-struct IncrementAsync: AtlasAsyncAction {
-    func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
+struct IncrementAsync: AtlasAction {
+    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>){
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             var newState = state
             newState.count += 1
@@ -32,7 +32,7 @@ struct IncrementAsync: AtlasAsyncAction {
 }
 
 struct CountOperation: AtlasActionGroup {
-    func handle(store: Atlas<CountState>, completition: @escaping () -> Void) {
+    func handle(store: Atlas<CountState>, completition: @escaping AtlasActionGroupCompletition) {
         store.dispatch(Increment())
         store.dispatch(Increment())
         store.dispatch(Increment())
@@ -55,14 +55,14 @@ class Tests: XCTestCase {
     }
     
     func testInitialization() {
-        let store = Atlas(initialState: CountState(
+        let store = Atlas(state: CountState(
             count: 0
         ))
         XCTAssert(store.state.count == 0, "Count should be 0")
     }
     
-    func testAction() {
-        let store = Atlas(initialState: CountState(
+    func testSyncAction() {
+        let store = Atlas(state: CountState(
             count: 0
         ))
         var expectations: [XCTestExpectation] = []
@@ -78,7 +78,7 @@ class Tests: XCTestCase {
     }
     
     func testAsyncAction() {
-        let store = Atlas(initialState: CountState(
+        let store = Atlas(state: CountState(
             count: 0
         ))
         let expectation = XCTestExpectation(description: "Testing asyncronous action")
@@ -90,7 +90,7 @@ class Tests: XCTestCase {
     }
     
     func testActionGroup() {
-        let store = Atlas(initialState: CountState(
+        let store = Atlas(state: CountState(
             count: 0
         ))
         let expectation = XCTestExpectation(description: "Testing asyncronous action")

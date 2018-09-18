@@ -7,7 +7,9 @@
 
 import Foundation
 
+public typealias AtlasActionGroupCompletition = () -> Void
+
 public protocol AtlasActionGroup {
     associatedtype StateType
-    func handle(store: Atlas<StateType>, completition: @escaping () -> Void)
+    func handle(store: Atlas<StateType>, completition: @escaping AtlasActionGroupCompletition)
 }

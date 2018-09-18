@@ -1,6 +1,6 @@
 {
   "name": "AtlasSwift",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Atlas is a redux store for your swift apps without the reducer layer",
   "description": "Atlas is a redux like store for your swift iOS/macOS/tvOS apps without the reducer layer",
   "homepage": "https://github.com/giuseppesalvo/atlas",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/giuseppesalvo/Atlas.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "social_media_url": "https://github.com/giuseppesalvo",
   "platforms": {
