@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// Type erasure
 public protocol AtlasAnySubscriber: class {
     func defaultNewState(_ state: Any)
     func defaultShouldUpdate(prevState: Any?, newState: Any) -> Bool

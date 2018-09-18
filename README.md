@@ -19,8 +19,9 @@ pod 'AtlasSwift'
 
 **there are only 2 components**
 
-- state
-- actions
+- State
+- Actions
+- Guards
 
 ### Initializing
 
@@ -39,15 +40,15 @@ let store = Atlas(state: CountState(
 
 ### Actions
 
-**Synchronous**
-
 ```swift
+
+// Actions can be synchronous or asynchronous
 
 struct Increment: AtlasAction {
-    func handle(state: CountState) -> CountState {
-        var newState = state
-        newState.count += 1
-        return state
+    func handle(state: CountState, completition: AtlasActionCompletition<CountState>) {
+        var newState   = state
+        newState.count = result
+        completition(newState)
     }
 }
 
@@ -57,27 +58,7 @@ store.dispatch(Increment()) { state in
 
 ```
 
-**Asynchronous**
-
-```swift
-
-struct Increment: AtlasAsyncAction {
-    func handle(state: CountState, completition: @escaping (_ state: CountState) -> Void) {
-        YourApi.doSomething { result in
-            var newState   = state
-            newState.count = result
-            completition(newState)
-        }
-    }
-}
-
-store.dispatch(Increment()) { state in
-    print("done! ", state.count)
-}
-
-```
-
-**Actions group**
+### Action Group
 
 ```swift
 
@@ -122,7 +103,10 @@ extension YourController: AtlasSubscriber {
 
 ```
 
-Avoiding unneeded updates and subscribing to a specific part of the store
+### Subscriber Should Update
+
+Avoiding unneeded updates and subscribing to a specific part of the store.
+By default, the shouldUpdate function returns always true.
 
 ```swift
 
@@ -134,6 +118,26 @@ extension YourController: AtlasSubscriber {
         return prevState?.count != newState.count
     }
 }
+
+```
+
+### Guards
+
+Guards are simple classes that track the store lifecycle
+In future, they will include also a middleware-like function.
+
+```swift
+
+struct Logger: AtlasGuard {
+    func willUpdate<A: AtlasAction>(state: State, action: A) {
+        print("will update!", state.count)
+    }
+    func didUpdate<A: AtlasAction>(state: State, action: A) {
+        print("update!", state.count)
+    }
+}
+
+let store = Atlas(state: YourState(), guards: [ Logger() ])
 
 ```
 

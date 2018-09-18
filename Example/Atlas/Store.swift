@@ -9,30 +9,48 @@
 import Foundation
 import AtlasSwift
 
-struct CountState {
-    var value: Int
-}
+var store = Atlas(
+    state: State(
+        count: CountState(value: 0)
+    ),
+    guards: [LoggerGuard()]
+)
+
+// MARK: State
 
 struct State {
     var count: CountState
 }
 
-var store = Atlas(state: State(
-    count: CountState(value: 0)
-))
+struct CountState {
+    var value: Int
+}
+
+// MARK: Guards
+
+struct LoggerGuard: AtlasGuard {
+    func willUpdate<A: AtlasAction>(state: State, action: A) {
+        print("will update!", state.count)
+    }
+    func didUpdate<A: AtlasAction>(state: State, action: A) {
+        print("update!", state.count)
+    }
+}
+
+// MARK: Actions
 
 struct Increment: AtlasAction {
-    func handle(state: State) -> State {
+    func handle(state: State, completition: AtlasActionCompletition<State>) {
         var newState = state
         newState.count.value += 1
-        return newState
+        completition(newState)
     }
 }
 
 struct Decrement: AtlasAction {
-    func handle(state: State) -> State {
+    func handle(state: State, completition: AtlasActionCompletition<State>) {
         var newState = state
         newState.count.value -= 1
-        return newState
+        completition(newState)
     }
 }

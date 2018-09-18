@@ -1,5 +1,5 @@
 //
-//  Action.swift
+//  AsyncAction.swift
 //  Habit
 //
 //  Created by Seth on 25/08/18.
@@ -8,7 +8,9 @@
 
 import Foundation
 
+public typealias AtlasActionCompletition<T> = (_ state: T) -> Void
+
 public protocol AtlasAction {
     associatedtype StateType
-    func handle(state: StateType) -> StateType
+    func handle(state: StateType, completition: AtlasActionCompletition<StateType>)
 }
