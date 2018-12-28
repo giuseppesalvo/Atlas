@@ -14,11 +14,11 @@ class ViewController: NSViewController {
     @IBOutlet var count: NSTextField!
     
     @IBAction func increment(_ sender: Any) {
-        store.dispatch(Increment())
+        CountStore.dispatch( Increment(value: 4) )
     }
 
     @IBAction func decrement(_ sender: Any) {
-        store.dispatch(Decrement())
+        CountStore.dispatch(Decrement())
     }
 }
 
@@ -26,15 +26,15 @@ extension ViewController: AtlasSubscriber {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        store.subscribe(self)
+        CountStore.subscribe(self)
     }
     
-    func shouldUpdate(prevState: State?, newState: State) -> Bool {
-        return prevState?.count.value != newState.count.value
+    func shouldUpdate(prevState: CountState?, newState: CountState) -> Bool {
+        return prevState?.value != newState.value
     }
     
-    func newState(_ state: State) {
-        count.stringValue = String(state.count.value)
+    func newState(_ state: CountState) {
+        count.stringValue = String(state.value)
     }
 }
 

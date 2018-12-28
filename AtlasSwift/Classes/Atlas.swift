@@ -17,7 +17,7 @@ public typealias AtlasDispatchCompletition<T> = (_ state: T) -> Void
 
 public class Atlas<T> {
     
-    private(set) public var state: T
+    public var state: T
     
     private var subscribers: Set<AtlasSubscriberBox> = []
     
@@ -31,9 +31,6 @@ public class Atlas<T> {
     private let semaphore: DispatchSemaphore = DispatchSemaphore(value: 1)
     
     public init(state: T, guards: [AtlasAnyGuard] = []) {
-        guard Mirror(reflecting: state).displayStyle == .struct else {
-            fatalError("The state should be a struct")
-        }
         self.state  = state
         self.guards = guards
     }
@@ -96,6 +93,7 @@ extension Atlas {
     public func subscribe<S: AtlasSubscriber>(
         _ subscriber: S, queue: DispatchQueue = .main
     ) where S.StateType == T {
+        if subscribers.contains(where: { $0.value === subscriber }) { return }
         let box = AtlasSubscriberBox(value: subscriber, queue: queue)
         subscribers.update(with: box)
         updateSubscriber(box: box, prevState: nil, newState: self.state)
@@ -118,9 +116,19 @@ extension Atlas {
 // MARK: Guards
 
 extension Atlas {
+    
+    func guardsShouldUpdate<A: AtlasAction>(state: T, action: A) -> Bool where A.StateType == T {
+        for g in guards {
+            if !g.defaultShouldUpdate(state: state, action: action) {
+                return false
+            }
+        }
+        return true
+    }
+    
     func guardsWillUpdate<A: AtlasAction>(state: T, action: A) where A.StateType == T {
         for g in guards {
-            queue.async{ g.defaultWillUpdate(state: state, action: action) }
+            g.defaultWillUpdate(state: state, action: action)
         }
     }
     
@@ -144,6 +152,9 @@ extension Atlas {
         completition: AtlasDispatchCompletition<T>? = nil
     ) where A.StateType == T {
         queue.async {
+            guard self.guardsShouldUpdate(state: self.state, action: action) else {
+                return
+            }
             self.guardsWillUpdate(state: self.state, action: action)
             self.semaphore.wait()
             action.handle(state: self.state) { state in
@@ -167,6 +178,9 @@ extension Atlas {
         completition: AtlasDispatchCompletition<T>? = nil
     ) where A.StateType == T {
         queue.async {
+            guard self.guardsShouldUpdate(state: self.state, action: action) else {
+                return
+            }
             self.guardsWillUpdate(state: self.state, action: action)
             action.handle(state: self.state) { state in
                 let oldState = self.state

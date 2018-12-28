@@ -87,6 +87,10 @@ In future, they will include also a middleware-like function.
 ```swift
 
 struct Logger: AtlasGuard {
+    // By default, this function returns true
+    func shouldUpdate<A: AtlasAction>(state: State, action: A) -> Bool {
+        return true
+    }
 
     func willUpdate<A: AtlasAction>(state: State, action: A) {
         print("will update!", state.count)

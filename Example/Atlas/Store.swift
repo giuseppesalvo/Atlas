@@ -9,48 +9,46 @@
 import Foundation
 import AtlasSwift
 
-var store = Atlas(
-    state: State(
-        count: CountState(value: 0)
-    ),
-    guards: [LoggerGuard()]
+let CountStore = Atlas(
+    state  : CountState(value: 0),
+    guards : [LoggerGuard()]
 )
 
-// MARK: State
-
-struct State {
-    var count: CountState
-}
+// MARK: CountState
 
 struct CountState {
-    var value: Int
+    let value: Int
 }
 
 // MARK: Guards
 
 struct LoggerGuard: AtlasGuard {
-    func willUpdate<A: AtlasAction>(state: State, action: A) {
-        print("will update!", state.count)
+    func shouldUpdate<A: AtlasAction>(state: CountState, action: A) -> Bool {
+        return true
     }
-    func didUpdate<A: AtlasAction>(state: State, action: A) {
-        print("update!", state.count)
+    func willUpdate<A: AtlasAction>(state: CountState, action: A) {
+        print("will update!", state.value)
+    }
+    func didUpdate<A: AtlasAction>(state: CountState, action: A) {
+        print("update!", state.value)
     }
 }
 
 // MARK: Actions
 
 struct Increment: AtlasAction {
-    func handle(state: State, completition: @escaping AtlasActionCompletition<State>) {
-        var newState = state
-        newState.count.value += 1
-        completition(newState)
+    var value: Int
+    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
+        completition(CountState(
+            value: state.value + value
+        ))
     }
 }
 
 struct Decrement: AtlasAction {
-    func handle(state: State, completition: @escaping AtlasActionCompletition<State>) {
-        var newState = state
-        newState.count.value -= 1
-        completition(newState)
+    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
+        completition(CountState(
+            value: state.value - 1
+        ))
     }
 }
