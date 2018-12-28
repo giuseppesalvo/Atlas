@@ -18,7 +18,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func decrement(_ sender: Any) {
-        CountStore.dispatch(Decrement())
+        CountStore.dispatch( Decrement() )
     }
 }
 
@@ -26,7 +26,7 @@ extension ViewController: AtlasSubscriber {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        CountStore.subscribe(self)
+        CountStore.subscribe(self, queue: DispatchQueue.main )
     }
     
     func shouldUpdate(prevState: CountState?, newState: CountState) -> Bool {
@@ -37,4 +37,3 @@ extension ViewController: AtlasSubscriber {
         count.stringValue = String(state.value)
     }
 }
-

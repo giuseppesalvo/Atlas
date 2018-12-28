@@ -157,7 +157,7 @@ extension Atlas {
             }
             self.guardsWillUpdate(state: self.state, action: action)
             self.semaphore.wait()
-            action.handle(state: self.state) { state in
+            action.handle(state: self.state) { (state) in
                 let oldState = self.state
                 self.setState(state)
                 self.semaphore.signal()
@@ -182,7 +182,7 @@ extension Atlas {
                 return
             }
             self.guardsWillUpdate(state: self.state, action: action)
-            action.handle(state: self.state) { state in
+            action.handle(state: self.state) { (state) in
                 let oldState = self.state
                 self.state = state
                 completition?(self.state)

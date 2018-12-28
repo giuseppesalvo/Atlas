@@ -41,7 +41,7 @@ struct Increment: AtlasAction {
     func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
         completition(CountState(
             value: state.value + value
-        ))
+        ), nil)
     }
 }
 
@@ -49,6 +49,6 @@ struct Decrement: AtlasAction {
     func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
         completition(CountState(
             value: state.value - 1
-        ))
+        ), nil)
     }
 }
