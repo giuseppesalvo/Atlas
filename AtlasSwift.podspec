@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AtlasSwift'
-  s.version          = '0.0.13'
+  s.version          = '0.1.0'
   s.summary          = 'Atlas is a redux-like store for your swift apps without the reducer layer'
 
   s.description      = <<-DESC

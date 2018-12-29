@@ -45,17 +45,18 @@ Actions can be synchronous or asynchronous
 ```swift
 
 struct Increment: AtlasAction {
-    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
+    func handle(state: CountState, context: AtlasActionContext<CountState>) {
         var newState   = state
         newState.count = result
-        completition(newState)
+        context.complete(newState)
+        // context.error(YourError)
     }
 }
 
 store.dispatch(Increment())
 
 // With a completition callback
-store.dispatch(Increment()) { state in
+store.dispatch(Increment()) { (error?, state) in
     print("done! ", state.count)
 }
 
@@ -98,12 +99,6 @@ extension YourController: AtlasSubscriber {
         store.subscribe(self)
     }
     
-    // There is no real need to unsubscribe your objects. Subscribers are weak references
-    override func viewWillDisappear() {
-        super.viewWillDisappear()
-        store.unsubscribe(self)
-    }
-    
     func newState(_ state: CountState) {
         print("count state changed!")
     }
@@ -115,6 +110,7 @@ extension YourController: AtlasSubscriber {
 
 Avoiding unneeded updates and subscribing to a specific part of the store.
 By default, the shouldUpdate function returns always true.
+To use this method, the state should be a value type.
 
 ```swift
 
@@ -132,7 +128,7 @@ extension YourController: AtlasSubscriber {
 Notes
 - Atlas uses a serial queue to dispatch every action, so you can be sure that your actions will be executed in the invokation order
 - The dispatch function is async, to avoid deadlocks. To track its end, you can use the completition argument
-- The subcribe function also have a second argument "queue", to subscribe a class on a specific queue
+- The subcribe function has a second argument "queue", to subscribe a class on a specific queue.
 
 ### That's all!
 
