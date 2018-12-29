@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
   s.source_files = 'AtlasSwift/Classes/**/*'
+  s.exclude_files = 'AtlasSwift/Example/**/*.plist'
   s.swift_version = '4.2'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 end

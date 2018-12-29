@@ -21,7 +21,6 @@
 		BBFDE41A0D22042C356A2841AF35F8D0 /* Pods-Atlas_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1532009F9114EAA28B8BED52492AB12B /* Pods-Atlas_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB16514E59A3C329F134C65DF7A9EFB9 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF31828C122D42FE0FB75FDA7CD820A /* Subscriber.swift */; };
 		DFDCE4798224D132417E68CAFE0A9AE0 /* Pods-Atlas_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F73765ED574B113B19A7EEEB11F109 /* Pods-Atlas_Tests-dummy.m */; };
-		EA73243E6D993B205B5AC0EDE4DA8C88 /* ActionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CA8C9ECCBC1668BE8C10F68D6F1D3 /* ActionGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		01E18671EC39BE8539764A3B397265E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		086CA8C9ECCBC1668BE8C10F68D6F1D3 /* ActionGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionGroup.swift; path = AtlasSwift/Classes/ActionGroup.swift; sourceTree = "<group>"; };
 		08D63AA86AEF6CF8DB3EE8841A12B8A5 /* SubscriberBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscriberBox.swift; path = AtlasSwift/Classes/SubscriberBox.swift; sourceTree = "<group>"; };
 		101B48EDB7CEE1F11E7362DA3354928D /* Pods-Atlas_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Atlas_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		1532009F9114EAA28B8BED52492AB12B /* Pods-Atlas_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Atlas_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			children = (
 				2F0176E0E248D2A8FE509D8D34F73AD5 /* Atlas.swift */,
 				A58AA857C34C812A5FD4CBC0CA4A77AD /* AtlasAction.swift */,
-				086CA8C9ECCBC1668BE8C10F68D6F1D3 /* ActionGroup.swift */,
 				F5429FC5BDA9531F8183548329F0FAF0 /* AtlasGuard.swift */,
 				3BF31828C122D42FE0FB75FDA7CD820A /* Subscriber.swift */,
 				08D63AA86AEF6CF8DB3EE8841A12B8A5 /* SubscriberBox.swift */,
@@ -390,7 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA73243E6D993B205B5AC0EDE4DA8C88 /* ActionGroup.swift in Sources */,
 				5BDDCA4CBD762C3BA61D1778990672D4 /* Atlas.swift in Sources */,
 				1011F5C120507F7AD628BB5FFF6B1494 /* AtlasAction.swift in Sources */,
 				A8F5D2244872482EB2E665D1C38597E9 /* AtlasGuard.swift in Sources */,

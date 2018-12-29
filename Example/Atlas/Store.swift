@@ -38,17 +38,17 @@ struct LoggerGuard: AtlasGuard {
 
 struct Increment: AtlasAction {
     var value: Int
-    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
-        completition(CountState(
+    func handle(state: CountState, context: AtlasActionContext<CountState> ) {
+        context.complete(CountState(
             value: state.value + value
-        ), nil)
+        ))
     }
 }
 
 struct Decrement: AtlasAction {
-    func handle(state: CountState, completition: @escaping AtlasActionCompletition<CountState>) {
-        completition(CountState(
+    func handle(state: CountState, context: AtlasActionContext<CountState> ) {
+        context.complete(CountState(
             value: state.value - 1
-        ), nil)
+        ))
     }
 }

@@ -61,24 +61,6 @@ store.dispatch(Increment()) { state in
 
 ```
 
-### Action Group
-
-```swift
-
-struct CountOperation: AtlasActionGroup {
-    func handle(store: Atlas<CountState>, completition: @escaping AtlasActionGroupCompletition) {
-        store.dispatch(Increment())
-        store.dispatch(Increment())
-        store.dispatch(Increment())
-        store.dispatch(Decrement()) { _ in
-            completition()
-        }
-    }
-}
-
-store.dispatch(CountOperation())
-```
-
 ## Guards
 
 Guards track the store lifecycle.

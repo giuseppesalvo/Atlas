@@ -13,7 +13,7 @@ import Foundation
  *
  */
 
-public typealias AtlasDispatchCompletition<T> = (_ state: T) -> Void
+public typealias AtlasDispatchCompletition<T> = (_ error: Error?, _ state: T) -> Void
 
 public class Atlas<T> {
     
@@ -33,6 +33,10 @@ public class Atlas<T> {
     public init(state: T, guards: [AtlasAnyGuard] = []) {
         self.state  = state
         self.guards = guards
+        
+        if Mirror(reflecting: self.state).displayStyle != .struct {
+            print("Atlas Warning: The state should be always a value type, otherwise the shouldUpdate method will not work properly.\n More info here: https://developer.apple.com/swift/blog/?id=10")
+        }
     }
 }
 
@@ -51,7 +55,7 @@ extension Atlas {
 extension Atlas {
     
     /**
-     * Trigger state changes on a subscriber.
+     * Triggering state changes on a SINGLE subscriber
      *
      */
     private func updateSubscriber(
@@ -68,7 +72,7 @@ extension Atlas {
     }
     
     /**
-     * Triggering all subscribers
+     * Triggering state changes on ALL subscribers
      *
      */
     private func updateSubscribers(
@@ -87,7 +91,7 @@ extension Atlas {
 extension Atlas {
     
     /**
-     * Subscribing a class.
+     * Subscribing a class
      *
      */
     public func subscribe<S: AtlasSubscriber>(
@@ -100,7 +104,7 @@ extension Atlas {
     }
     
     /**
-     * Unsubscribing a class.
+     * Unsubscribing a class
      *
      */
     public func unsubscribe<S: AtlasSubscriber>(
@@ -152,19 +156,29 @@ extension Atlas {
         completition: AtlasDispatchCompletition<T>? = nil
     ) where A.StateType == T {
         queue.async {
+            
             guard self.guardsShouldUpdate(state: self.state, action: action) else {
                 return
             }
             self.guardsWillUpdate(state: self.state, action: action)
             self.semaphore.wait()
-            action.handle(state: self.state) { (state) in
-                let oldState = self.state
-                self.setState(state)
-                self.semaphore.signal()
-                completition?(self.state)
-                self.updateSubscribers(prevState: oldState, newState: self.state)
-                self.guardsDidUpdate(state: self.state, action: action)
-            }
+            
+            let context = AtlasActionContext<T>(
+                complete: { (state) in
+                    let oldState = self.state
+                    self.setState(state)
+                    self.semaphore.signal()
+                    completition?(nil, self.state)
+                    self.updateSubscribers(prevState: oldState, newState: self.state)
+                    self.guardsDidUpdate(state: self.state, action: action)
+                },
+                error: { error in
+                    self.semaphore.signal()
+                    completition?(error, self.state)
+                }
+            )
+            
+            action.handle(state: self.state, context: context)
         }
     }
     
@@ -182,28 +196,21 @@ extension Atlas {
                 return
             }
             self.guardsWillUpdate(state: self.state, action: action)
-            action.handle(state: self.state) { (state) in
-                let oldState = self.state
-                self.state = state
-                completition?(self.state)
-                self.updateSubscribers(prevState: oldState, newState: self.state)
-                self.guardsWillUpdate(state: self.state, action: action)
-            }
-        }
-    }
-    
-    /**
-     * Dispatching a group of actions
-     *
-     */
-    public func dispatch<A: AtlasActionGroup>(
-        _ action: A,
-        completition: AtlasDispatchCompletition<T>? = nil
-    ) where A.StateType == T {
-        queue.async {
-            action.handle(store: self) {
-                completition?(self.state)
-            }
+            
+            let context = AtlasActionContext<T>(
+                complete: { (state) in
+                    let oldState = self.state
+                    self.setState(state)
+                    completition?(nil, self.state)
+                    self.updateSubscribers(prevState: oldState, newState: self.state)
+                    self.guardsWillUpdate(state: self.state, action: action)
+                },
+                error: { error in
+                    completition?(error, self.state)
+                }
+            )
+            
+            action.handle(state: self.state, context: context)
         }
     }
 }

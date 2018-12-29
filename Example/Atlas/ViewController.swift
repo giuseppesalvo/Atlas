@@ -26,7 +26,7 @@ extension ViewController: AtlasSubscriber {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        CountStore.subscribe(self, queue: DispatchQueue.main )
+        CountStore.subscribe(self)
     }
     
     func shouldUpdate(prevState: CountState?, newState: CountState) -> Bool {
